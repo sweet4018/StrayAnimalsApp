@@ -1,0 +1,6 @@
+framework module Pods_StrayAnimals {
+  umbrella header "Pods-StrayAnimals-umbrella.h"
+
+  export *
+  module * { export * }
+}

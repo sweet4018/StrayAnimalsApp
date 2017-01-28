@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeDetailToolBar" customModule="StrayAnimals" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="kw5-Rz-7bx" customClass="HomeDetailToolBar" customModule="StrayAnimals" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="45"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sh1-aV-QjF">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>
+                    <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRx-y0-kmn">
+                    <rect key="frame" x="15" y="5" width="133" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="133" id="S92-ia-44U"/>
+                        <constraint firstAttribute="height" constant="35" id="imY-l5-m1U"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <state key="normal" title="收藏" image="collect_1">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="18"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="likeButtonClick:" destination="kw5-Rz-7bx" eventType="touchUpInside" id="7g8-Xu-CE8"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wa-fs-FxO">
+                    <rect key="frame" x="167" y="5" width="418" height="35"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                    <state key="normal" title="帶牠回家吧！">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="18"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="goTMALLButtonClick" destination="kw5-Rz-7bx" eventType="touchUpInside" id="Phc-TB-sVj"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="9wa-fs-FxO" secondAttribute="trailing" constant="15" id="3gQ-EA-ei4"/>
+                <constraint firstItem="sh1-aV-QjF" firstAttribute="top" secondItem="kw5-Rz-7bx" secondAttribute="top" id="AkX-jL-Piw"/>
+                <constraint firstAttribute="bottom" secondItem="oRx-y0-kmn" secondAttribute="bottom" constant="5" id="LkC-jQ-ruj"/>
+                <constraint firstItem="oRx-y0-kmn" firstAttribute="top" secondItem="sh1-aV-QjF" secondAttribute="bottom" constant="4" id="Q6h-FE-5H5"/>
+                <constraint firstItem="oRx-y0-kmn" firstAttribute="leading" secondItem="kw5-Rz-7bx" secondAttribute="leading" constant="15" id="RrL-di-f1g"/>
+                <constraint firstItem="9wa-fs-FxO" firstAttribute="bottom" secondItem="oRx-y0-kmn" secondAttribute="bottom" id="a8D-4u-Xth"/>
+                <constraint firstItem="9wa-fs-FxO" firstAttribute="leading" secondItem="oRx-y0-kmn" secondAttribute="trailing" constant="19" id="kWB-Fr-UAh"/>
+                <constraint firstItem="sh1-aV-QjF" firstAttribute="leading" secondItem="kw5-Rz-7bx" secondAttribute="leading" id="tqe-Dg-Gn1"/>
+                <constraint firstAttribute="trailing" secondItem="sh1-aV-QjF" secondAttribute="trailing" id="uI3-SP-LKa"/>
+                <constraint firstItem="9wa-fs-FxO" firstAttribute="top" secondItem="sh1-aV-QjF" secondAttribute="bottom" constant="4" id="zJ4-mb-Fms"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="favoriteButton" destination="oRx-y0-kmn" id="QLW-ue-a19"/>
+                <outlet property="takeHomeButton" destination="9wa-fs-FxO" id="DEM-O3-w2g"/>
+            </connections>
+            <point key="canvasLocation" x="307" y="60.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="collect_1" width="44" height="44"/>
+    </resources>
+</document>
