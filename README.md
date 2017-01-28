@@ -32,4 +32,4 @@
 	end
 	
 ##截圖
-![探店效果图]https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/架構.png
+[架構] img=https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/架構.png
