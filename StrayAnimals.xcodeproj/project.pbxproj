@@ -65,6 +65,7 @@
 		DB81B3231D9AA9CD00EE7068 /* EventCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB81B3211D9AA9CD00EE7068 /* EventCellTableViewCell.xib */; };
 		DB81B3301D9CBD6200EE7068 /* ShopDetailContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB81B32E1D9CBD6200EE7068 /* ShopDetailContentView.swift */; };
 		DB81B3311D9CBD6200EE7068 /* ShopDetailContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB81B32F1D9CBD6200EE7068 /* ShopDetailContentView.xib */; };
+		DB9C20B21E446FEA001D99EF /* FeedbackViewController in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20B11E446FEA001D99EF /* FeedbackViewController */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,6 +131,7 @@
 		DB81B3211D9AA9CD00EE7068 /* EventCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventCellTableViewCell.xib; sourceTree = "<group>"; };
 		DB81B32E1D9CBD6200EE7068 /* ShopDetailContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopDetailContentView.swift; sourceTree = "<group>"; };
 		DB81B32F1D9CBD6200EE7068 /* ShopDetailContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopDetailContentView.xib; sourceTree = "<group>"; };
+		DB9C20B11E446FEA001D99EF /* FeedbackViewController */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FeedbackViewController; sourceTree = "<group>"; };
 		F2C09C71EE3AB645CAFC0A0C /* Pods-StrayAnimals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StrayAnimals.release.xcconfig"; path = "Pods/Target Support Files/Pods-StrayAnimals/Pods-StrayAnimals.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,7 +201,9 @@
 		DB0610A61D90E16200567BC2 /* Me */ = {
 			isa = PBXGroup;
 			children = (
-				DB0610C61D92395A00567BC2 /* MeViewController.swift */,
+				DB9C20B01E446CA0001D99EF /* Controller */,
+				DB9C20AE1E446C90001D99EF /* Model */,
+				DB9C20AF1E446C9B001D99EF /* View */,
 			);
 			name = Me;
 			sourceTree = "<group>";
@@ -379,6 +383,29 @@
 			isa = PBXGroup;
 			children = (
 				DB0610C21D92394200567BC2 /* FavoriteViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		DB9C20AE1E446C90001D99EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DB9C20AF1E446C9B001D99EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		DB9C20B01E446CA0001D99EF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DB0610C61D92395A00567BC2 /* MeViewController.swift */,
+				DB9C20B11E446FEA001D99EF /* FeedbackViewController */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -602,6 +629,7 @@
 				DB81B3191D9A0CFF00EE7068 /* HomeDetailButtonView.swift in Sources */,
 				DB81B2F01D937E7A00EE7068 /* CityCollectionReusableView.swift in Sources */,
 				DB0610C31D92394200567BC2 /* FavoriteViewController.swift in Sources */,
+				DB9C20B21E446FEA001D99EF /* FeedbackViewController in Sources */,
 				DB0873C81D9E0CBB00972FFD /* AnimalViewCell.swift in Sources */,
 				DB7D1A771DAB7DAB00A99D3B /* MapTableViewCell.swift in Sources */,
 				DB0610AD1D912A6700567BC2 /* NewfeatureCollectionViewController.swift in Sources */,

@@ -53,10 +53,7 @@ class MeViewController: BaseViewController {
         tableView.sectionFooterHeight = 0.1
         tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
         view.addSubview(tableView)
-        
     }
-    
-
   }
 
 extension MeViewController : UITableViewDelegate,UITableViewDataSource {
@@ -92,6 +89,13 @@ extension MeViewController : UITableViewDelegate,UITableViewDataSource {
         return cell!
     }
     
-    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.row == 0 {
+            
+            if indexPath.row == MeCellType.Feedback.hashValue {
+                
+            }
+        }
+    }
     
 }
