@@ -23,9 +23,11 @@ enum MeCellType:Int {
     case About = 5
 }
 
-class MeViewController: UIViewController {
-
- 
+class MeViewController: BaseViewController {
+    
+    private var tableView:UITableView!
+    
+    private lazy var meIcon : NSMutableArray = NSMutableArray(array: ["feedback","usercenter","score","recomment","recommendfriend","about"])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,10 +35,5 @@ class MeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
   }
