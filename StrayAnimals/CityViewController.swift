@@ -81,7 +81,6 @@ class CityViewController: UIViewController {
         collView.registerClass(CityHeadCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headView")
         collView.registerClass(CityFootCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "footView")
         collView.alwaysBounceVertical = true
-        
         view.addSubview(collView!)
     }
     
