@@ -8,8 +8,25 @@
 
 import UIKit
 
+enum MeCellType:Int {
+    ///留言回饋
+    case Feedback = 0
+    ///給我們評價
+    case GiveEvaluation = 1
+    ///點讚
+    case ForLike = 2
+    ///應用推薦
+    case RecommendApp = 3
+    ///推薦給朋友
+    case Recommendtofriends = 4
+    ///關於我們
+    case About = 5
+}
+
 class MeViewController: UIViewController {
 
+ 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,14 +39,4 @@ class MeViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
+  }
