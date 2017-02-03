@@ -14,13 +14,10 @@
 * SDWebImage:圖片處理
 
 ### 第三方套件：
-
 	source 'https://github.com/CocoaPods/Specs.git'
 	platform :ios, "8.0"
 	use_frameworks!
-
 	target :"StrayAnimals" do
-
 	pod "Kingfisher" , "~>2.6.0"
 	pod "SnapKit" , "~>0.22.0"
 	pod "SVProgressHUD"
