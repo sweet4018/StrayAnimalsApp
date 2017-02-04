@@ -65,7 +65,7 @@
 		DB81B3231D9AA9CD00EE7068 /* EventCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB81B3211D9AA9CD00EE7068 /* EventCellTableViewCell.xib */; };
 		DB81B3301D9CBD6200EE7068 /* ShopDetailContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB81B32E1D9CBD6200EE7068 /* ShopDetailContentView.swift */; };
 		DB81B3311D9CBD6200EE7068 /* ShopDetailContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB81B32F1D9CBD6200EE7068 /* ShopDetailContentView.xib */; };
-		DB9C20B21E446FEA001D99EF /* FeedbackViewController in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20B11E446FEA001D99EF /* FeedbackViewController */; };
+		DB9C20B41E4488B9001D99EF /* FeedBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20B31E4488B9001D99EF /* FeedBackViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -131,7 +131,7 @@
 		DB81B3211D9AA9CD00EE7068 /* EventCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventCellTableViewCell.xib; sourceTree = "<group>"; };
 		DB81B32E1D9CBD6200EE7068 /* ShopDetailContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopDetailContentView.swift; sourceTree = "<group>"; };
 		DB81B32F1D9CBD6200EE7068 /* ShopDetailContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopDetailContentView.xib; sourceTree = "<group>"; };
-		DB9C20B11E446FEA001D99EF /* FeedbackViewController */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FeedbackViewController; sourceTree = "<group>"; };
+		DB9C20B31E4488B9001D99EF /* FeedBackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedBackViewController.swift; sourceTree = "<group>"; };
 		F2C09C71EE3AB645CAFC0A0C /* Pods-StrayAnimals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StrayAnimals.release.xcconfig"; path = "Pods/Target Support Files/Pods-StrayAnimals/Pods-StrayAnimals.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -405,7 +405,7 @@
 			isa = PBXGroup;
 			children = (
 				DB0610C61D92395A00567BC2 /* MeViewController.swift */,
-				DB9C20B11E446FEA001D99EF /* FeedbackViewController */,
+				DB9C20B31E4488B9001D99EF /* FeedBackViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -597,6 +597,7 @@
 				DB0610C71D92395A00567BC2 /* MeViewController.swift in Sources */,
 				DB81B3161D990C1600EE7068 /* HomeDetailCollectionViewCell.swift in Sources */,
 				DB81B31C1D9A10ED00EE7068 /* DetailChoiceButtonView.swift in Sources */,
+				DB9C20B41E4488B9001D99EF /* FeedBackViewController.swift in Sources */,
 				DB81B2CB1D928E4800EE7068 /* Animals.swift in Sources */,
 				DB81B30B1D98A55F00EE7068 /* BaseViewController.swift in Sources */,
 				DB0610BB1D9223EA00567BC2 /* NavigationController.swift in Sources */,
@@ -629,7 +630,6 @@
 				DB81B3191D9A0CFF00EE7068 /* HomeDetailButtonView.swift in Sources */,
 				DB81B2F01D937E7A00EE7068 /* CityCollectionReusableView.swift in Sources */,
 				DB0610C31D92394200567BC2 /* FavoriteViewController.swift in Sources */,
-				DB9C20B21E446FEA001D99EF /* FeedbackViewController in Sources */,
 				DB0873C81D9E0CBB00972FFD /* AnimalViewCell.swift in Sources */,
 				DB7D1A771DAB7DAB00A99D3B /* MapTableViewCell.swift in Sources */,
 				DB0610AD1D912A6700567BC2 /* NewfeatureCollectionViewController.swift in Sources */,
