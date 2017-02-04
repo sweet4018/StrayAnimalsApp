@@ -91,10 +91,16 @@ extension MeViewController : UITableViewDelegate,UITableViewDataSource {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.row == 0 {
-            
-            if indexPath.row == MeCellType.Feedback.hashValue {
-                
+            if indexPath.row == MeCellType.Feedback.hashValue {                 //留言回饋
+                let feedbackVC = FeedBackViewController()
+                navigationController?.pushViewController(feedbackVC, animated: true)
+            }else if indexPath.row == MeCellType.GiveEvaluation.hashValue{      //給我們評價
+                let appShare = UIApplication.sharedApplication()
+                appShare.openURL(NSURL(string: "https://appsto.re/tw/Ku-ox.i")!)
+          
             }
+        }else {
+            print("a")
         }
     }
     
