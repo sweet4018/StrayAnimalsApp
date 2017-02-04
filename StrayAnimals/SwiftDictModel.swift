@@ -12,7 +12,7 @@ import Foundation
     static func customClassMapping() -> [String: String]?
 }
 
-///  字典转模型管理器
+///  字典轉模型管理器
 public class DictModelManager {
     
     private static let instance = DictModelManager()
@@ -21,14 +21,14 @@ public class DictModelManager {
         return instance
     }
     
-    ///  字典转模型
-    ///  - parameter dict: 数据字典
-    ///  - parameter cls:  模型类
+    ///  字典轉模型
+    ///  - parameter dict: 數據字典
+    ///  - parameter cls:  模型類
     ///
-    ///  - returns: 模型对象
+    ///  - returns: 模型對象
     public func objectWithDictionary(dict: NSDictionary, cls: AnyClass) -> AnyObject? {
         
-        // 动态获取命名空间
+        //動態獲取命名空間
         let ns = NSBundle.mainBundle().infoDictionary!["CFBundleExecutable"] as! String
         
         // 模型信息
@@ -37,7 +37,7 @@ public class DictModelManager {
         let obj: AnyObject = (cls as! NSObject.Type).init()
         
         autoreleasepool {
-            // 3. 遍历模型字典
+            // 3. 遍歷模型字典
             for (k, v) in infoDict {
                 
                 if let value: AnyObject = dict[k] {
@@ -70,12 +70,12 @@ public class DictModelManager {
         return obj
     }
     
-    ///  创建自定义对象数组
+    ///  創建自定義對像數組
     ///
-    ///  - parameter NSArray: 字典数组
-    ///  - parameter cls:     模型类
+    ///  - parameter NSArray: 字典數組
+    ///  - parameter cls:     模型類
     ///
-    ///  - returns: 模型数组
+    ///  - returns:模型數組
     public func objectsWithArray(array: NSArray, cls: AnyClass) -> NSArray? {
         
         var list = [AnyObject]()
@@ -103,17 +103,17 @@ public class DictModelManager {
         }
     }
     
-    ///  模型转字典
+    ///  模型轉字典
     ///
-    ///  - parameter obj: 模型对象
+    ///  - parameter obj: 模型對象
     ///
     ///  - returns: 字典信息
     public func objectDictionary(obj: AnyObject) -> [String: AnyObject]? {
-        // 1. 取出对象模型字典
+        // 1. 取出對像模型字典
         let infoDict = fullModelInfo(obj.classForCoder)
         
         var result = [String: AnyObject]()
-        // 2. 遍历字典
+        // 2. 遍歷字典
         for (k, v) in infoDict {
             var value: AnyObject? = obj.valueForKey(k)
             if value == nil {
@@ -145,11 +145,9 @@ public class DictModelManager {
         }
     }
     
-    ///  模型数组转字典数组
-    ///
-    ///  - parameter array: 模型数组
-    ///
-    ///  - returns: 字典数组
+    /// 模型數組轉字典數組
+    /// - parameter array: 模型數組
+    /// - returns: 字典數組
     public func objectArray(array: [AnyObject]) -> [AnyObject]? {
         
         var result = [AnyObject]()
@@ -175,15 +173,14 @@ public class DictModelManager {
         }
     }
     
-    // MARK: - 私有函数
-    ///  加载完整类信息
+    // MARK: - 私有函數
+    /// 加載完整類信息
     ///
-    ///  - parameter cls: 模型类
-    ///
-    ///  - returns: 模型类完整信息
+    /// - parameter cls: 模型類
+    ///- returns: 模型類完整信息
     func fullModelInfo(cls: AnyClass) -> [String: String] {
         
-        // 检测缓冲池
+        // 檢測緩衝池
         if let cache = modelCache["\(cls)"] {
             return cache
         }
@@ -196,28 +193,28 @@ public class DictModelManager {
             currentCls = parent
         }
         
-        // 写入缓冲池
+      // 寫入緩衝池
         modelCache["\(cls)"] = infoDict
         
         return infoDict
     }
     
-    ///  加载类信息
+    /// 加載類信息
     ///
-    ///  - parameter cls: 模型类
+    /// - parameter cls: 模型類
     ///
-    ///  - returns: 模型类信息
+    /// - returns: 模型類信息
     func modelInfo(cls: AnyClass) -> [String: String] {
-        // 检测缓冲池
+       // 檢測緩衝池
         if let cache = modelCache["\(cls)"] {
             return cache
         }
         
-        // 拷贝属性列表
+        // 拷貝屬性列表
         var count: UInt32 = 0
         let properties = class_copyPropertyList(cls, &count)
         
-        // 检查类是否实现了协议
+        // 檢查類是否實現了協議
         var mappingDict: [String: String]?
         if cls.respondsToSelector("customClassMapping") {
             mappingDict = cls.customClassMapping()
@@ -227,7 +224,7 @@ public class DictModelManager {
         for i in 0..<count {
             let property = properties[Int(i)]
             
-            // 属性名称
+            //屬性名稱
             let cname = property_getName(property)
             let name = String.fromCString(cname)!
             
@@ -238,18 +235,18 @@ public class DictModelManager {
         
         free(properties)
         
-        // 写入缓冲池
+        // 寫入緩衝池
         modelCache["\(cls)"] = infoDict
         
         return infoDict
     }
     
-    /// 模型缓冲，[类名: 模型信息字典]
+    /// 模型緩衝，[類名: 模型信息字典]
     var modelCache = [String: [String: String]]()
 }
 
 extension Dictionary {
-    ///  将字典合并到当前字典
+    ///  將字典合併到當前字典
     mutating func merge<K, V>(dict: [K: V]) {
         for (k, v) in dict {
             self.updateValue(v as! Value, forKey: k as! Key)
