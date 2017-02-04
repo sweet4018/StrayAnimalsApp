@@ -10,15 +10,18 @@ import UIKit
 
 class AboutViewController: UIViewController {
 
+    init() {
+        super.init(nibName: "AboutViewController", bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(nibName: "AboutViewController", bundle: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        navigationItem.title = "關於我們"
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
 }

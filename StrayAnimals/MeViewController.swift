@@ -106,7 +106,8 @@ extension MeViewController : UITableViewDelegate,UITableViewDataSource {
                 let activityController = UIActivityViewController(activityItems: [text], applicationActivities: nil)
                 self.presentViewController(activityController, animated: true, completion: nil)
             }else if indexPath.row == MeCellType.About.hashValue{               //關於我們
-            
+                let aboutVC = AboutViewController()
+                navigationController!.pushViewController(aboutVC, animated: true)
             }
         }else {
             

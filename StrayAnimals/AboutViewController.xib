@@ -15,13 +15,58 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ynx-KO-xv5">
-                    <rect key="frame" x="67" y="0.0" width="240" height="128"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ynx-KO-xv5">
+                    <rect key="frame" x="136" y="10" width="102" height="99"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="版本:1.0.1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Tr-gk-uZj">
+                    <rect key="frame" x="0.0" y="566" width="375" height="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="聯絡我：sweet4018@gmail.com" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abB-O4-1I9">
+                    <rect key="frame" x="100" y="616" width="206" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="作者姓名: 陳政揚" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csU-19-N17">
+                    <rect key="frame" x="100" y="589" width="146" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="146" id="3Kn-2I-0XI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutdetail" translatesAutoresizingMaskIntoConstraints="NO" id="2Nd-EW-rbH">
+                    <rect key="frame" x="24" y="117" width="327" height="277"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="277" id="csD-CD-Lta"/>
+                    </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="abB-O4-1I9" secondAttribute="trailing" constant="69" id="1MV-E0-VCP"/>
+                <constraint firstItem="2Nd-EW-rbH" firstAttribute="top" secondItem="ynx-KO-xv5" secondAttribute="bottom" constant="8" symbolic="YES" id="53U-XC-hCG"/>
+                <constraint firstItem="csU-19-N17" firstAttribute="top" secondItem="3Tr-gk-uZj" secondAttribute="bottom" constant="8" symbolic="YES" id="6oi-JQ-lsv"/>
+                <constraint firstItem="csU-19-N17" firstAttribute="leading" secondItem="abB-O4-1I9" secondAttribute="leading" id="9zf-ft-wSq"/>
+                <constraint firstItem="2Nd-EW-rbH" firstAttribute="centerX" secondItem="3Tr-gk-uZj" secondAttribute="centerX" id="LYz-Mf-2XN"/>
+                <constraint firstAttribute="trailing" secondItem="3Tr-gk-uZj" secondAttribute="trailing" id="PcR-00-Cnq"/>
+                <constraint firstItem="2Nd-EW-rbH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="24" id="QwJ-K6-4X3"/>
+                <constraint firstItem="3Tr-gk-uZj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bGP-Fb-mXA"/>
+                <constraint firstItem="ynx-KO-xv5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="hqr-hg-rDe"/>
+                <constraint firstAttribute="bottom" secondItem="abB-O4-1I9" secondAttribute="bottom" constant="34" id="oki-bT-CcF"/>
+                <constraint firstItem="abB-O4-1I9" firstAttribute="top" secondItem="csU-19-N17" secondAttribute="bottom" constant="10" id="qr1-Ak-Sf9"/>
+                <constraint firstItem="ynx-KO-xv5" firstAttribute="centerX" secondItem="2Nd-EW-rbH" secondAttribute="centerX" id="v9P-Ba-HOq"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
         </view>
     </objects>
+    <resources>
+        <image name="aboutdetail" width="285" height="241"/>
+        <image name="logo" width="102" height="99"/>
+    </resources>
 </document>
