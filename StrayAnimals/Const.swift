@@ -33,6 +33,8 @@ struct theme {
     static let NavItemFont: UIFont = UIFont.systemFontOfSize(16)
     ///  APP導航列titleFont文字大小
     static let NavTitleFont: UIFont = UIFont.systemFontOfSize(18)
+    ///UIApplication.sharedApplication
+    static let appShare = UIApplication.sharedApplication()
 }
 
 /// RGBA的顏色設置
@@ -63,5 +65,6 @@ public let SD_RefreshImage_Width: CGFloat = 35
 
 /// 動畫時長
 let kAnimationDuration = 0.25
+
 
 

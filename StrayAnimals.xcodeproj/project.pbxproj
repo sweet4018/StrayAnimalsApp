@@ -66,6 +66,8 @@
 		DB81B3301D9CBD6200EE7068 /* ShopDetailContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB81B32E1D9CBD6200EE7068 /* ShopDetailContentView.swift */; };
 		DB81B3311D9CBD6200EE7068 /* ShopDetailContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB81B32F1D9CBD6200EE7068 /* ShopDetailContentView.xib */; };
 		DB9C20B41E4488B9001D99EF /* FeedBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20B31E4488B9001D99EF /* FeedBackViewController.swift */; };
+		DB9C20BD1E45CF95001D99EF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20BB1E45CF95001D99EF /* AboutViewController.swift */; };
+		DB9C20BE1E45CF95001D99EF /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB9C20BC1E45CF95001D99EF /* AboutViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +134,8 @@
 		DB81B32E1D9CBD6200EE7068 /* ShopDetailContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopDetailContentView.swift; sourceTree = "<group>"; };
 		DB81B32F1D9CBD6200EE7068 /* ShopDetailContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopDetailContentView.xib; sourceTree = "<group>"; };
 		DB9C20B31E4488B9001D99EF /* FeedBackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedBackViewController.swift; sourceTree = "<group>"; };
+		DB9C20BB1E45CF95001D99EF /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		DB9C20BC1E45CF95001D99EF /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		F2C09C71EE3AB645CAFC0A0C /* Pods-StrayAnimals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StrayAnimals.release.xcconfig"; path = "Pods/Target Support Files/Pods-StrayAnimals/Pods-StrayAnimals.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -397,6 +401,8 @@
 		DB9C20AF1E446C9B001D99EF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DB9C20BB1E45CF95001D99EF /* AboutViewController.swift */,
+				DB9C20BC1E45CF95001D99EF /* AboutViewController.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -479,6 +485,7 @@
 				DB81B3091D96638000EE7068 /* ThemeCell.xib in Resources */,
 				DB81B2E61D936D7100EE7068 /* events in Resources */,
 				DB5863101D8FD58500E17C9C /* LaunchScreen.storyboard in Resources */,
+				DB9C20BE1E45CF95001D99EF /* AboutViewController.xib in Resources */,
 				DB7D1A781DAB7DAB00A99D3B /* MapTableViewCell.xib in Resources */,
 				DB81B3171D990C1600EE7068 /* HomeDetailCollectionViewCell.xib in Resources */,
 				DB81B31D1D9A10ED00EE7068 /* DetailChoiceButtonView.xib in Resources */,
@@ -594,6 +601,7 @@
 			files = (
 				DB81B2FC1D9659C200EE7068 /* String.swift in Sources */,
 				DB81B2DD1D936A8700EE7068 /* MainTableView.swift in Sources */,
+				DB9C20BD1E45CF95001D99EF /* AboutViewController.swift in Sources */,
 				DB0610C71D92395A00567BC2 /* MeViewController.swift in Sources */,
 				DB81B3161D990C1600EE7068 /* HomeDetailCollectionViewCell.swift in Sources */,
 				DB81B31C1D9A10ED00EE7068 /* DetailChoiceButtonView.swift in Sources */,

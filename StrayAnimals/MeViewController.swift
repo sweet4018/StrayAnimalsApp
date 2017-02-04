@@ -90,18 +90,28 @@ extension MeViewController : UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.row == 0 {
+        if indexPath.section == 0 {
+            
             if indexPath.row == MeCellType.Feedback.hashValue {                 //留言回饋
                 let feedbackVC = FeedBackViewController()
                 navigationController?.pushViewController(feedbackVC, animated: true)
             }else if indexPath.row == MeCellType.GiveEvaluation.hashValue{      //給我們評價
-                let appShare = UIApplication.sharedApplication()
-                appShare.openURL(NSURL(string: "https://appsto.re/tw/Ku-ox.i")!)
-          
+                theme.appShare.openURL(NSURL(string: "https://itunes.apple.com/tw/app/instagram/id389801252?mt=8&v0=WWW-GCTW-ITSTOP100-FREEAPPS&l=zh&ign-mpt=uo%3D4")!)
+            }else if indexPath.row == MeCellType.ForLike.hashValue{             //給我們一個讚
+                theme.appShare.openURL(NSURL(string: "https://github.com/sweet4018/StrayAnimalsApp")!)
+            }else if indexPath.row == MeCellType.RecommendApp.hashValue{        //推薦的app
+                theme.appShare.openURL(NSURL(string: "https://github.com/sweet4018")!)
+            }else if indexPath.row == MeCellType.Recommendtofriends.hashValue{  //推薦給朋友
+                let text = "StaryAnimals收養流浪動物App" + "\n\n下載：https://github.com/sweet4018/StrayAnimalsApp"
+                let activityController = UIActivityViewController(activityItems: [text], applicationActivities: nil)
+                self.presentViewController(activityController, animated: true, completion: nil)
+            }else if indexPath.row == MeCellType.About.hashValue{               //關於我們
+            
             }
         }else {
-            print("a")
+            
         }
+        
     }
     
 }
