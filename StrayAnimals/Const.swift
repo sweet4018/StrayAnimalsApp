@@ -35,6 +35,8 @@ struct theme {
     static let NavTitleFont: UIFont = UIFont.systemFontOfSize(18)
     ///UIApplication.sharedApplication
     static let appShare = UIApplication.sharedApplication()
+    ///catche文件路徑
+    static let cachesPath: String = NSSearchPathForDirectoriesInDomains(.CachesDirectory, .UserDomainMask, true).last!
 }
 
 /// RGBA的顏色設置

@@ -68,6 +68,7 @@
 		DB9C20B41E4488B9001D99EF /* FeedBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20B31E4488B9001D99EF /* FeedBackViewController.swift */; };
 		DB9C20BD1E45CF95001D99EF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20BB1E45CF95001D99EF /* AboutViewController.swift */; };
 		DB9C20BE1E45CF95001D99EF /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB9C20BC1E45CF95001D99EF /* AboutViewController.xib */; };
+		DB9C20C01E45E136001D99EF /* FileTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20BF1E45E136001D99EF /* FileTool.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,6 +137,7 @@
 		DB9C20B31E4488B9001D99EF /* FeedBackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedBackViewController.swift; sourceTree = "<group>"; };
 		DB9C20BB1E45CF95001D99EF /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		DB9C20BC1E45CF95001D99EF /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		DB9C20BF1E45E136001D99EF /* FileTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileTool.swift; sourceTree = "<group>"; };
 		F2C09C71EE3AB645CAFC0A0C /* Pods-StrayAnimals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StrayAnimals.release.xcconfig"; path = "Pods/Target Support Files/Pods-StrayAnimals/Pods-StrayAnimals.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -240,6 +242,7 @@
 				DB81B2CC1D92961000EE7068 /* NetworkTool.swift */,
 				DB81B2E01D936D0F00EE7068 /* SwiftDictModel.swift */,
 				DB81B2F11D937FF600EE7068 /* RefreshHeader.swift */,
+				DB9C20BF1E45E136001D99EF /* FileTool.swift */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -627,6 +630,7 @@
 				DB0610B91D91372100567BC2 /* TabBarController.swift in Sources */,
 				DB81B2FA1D93A86500EE7068 /* UIImageVIew.swift in Sources */,
 				DB0610AB1D91283F00567BC2 /* Const.swift in Sources */,
+				DB9C20C01E45E136001D99EF /* FileTool.swift in Sources */,
 				DB81B3221D9AA9CD00EE7068 /* EventCellTableViewCell.swift in Sources */,
 				DB81B30E1D98EBA100EE7068 /* HomeDetailToolBar.swift in Sources */,
 				DB81B2D01D929C5300EE7068 /* CollectionViewCell.swift in Sources */,

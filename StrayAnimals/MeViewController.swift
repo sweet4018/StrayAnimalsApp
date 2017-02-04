@@ -110,7 +110,10 @@ extension MeViewController : UITableViewDelegate,UITableViewDataSource {
                 navigationController!.pushViewController(aboutVC, animated: true)
             }
         }else {
-            
+            weak var tmpSelf = self
+            FileTool.cleanFolder(theme.cachesPath, complete: { () -> () in
+                tmpSelf!.tableView.reloadData()
+            })
         }
         
     }
