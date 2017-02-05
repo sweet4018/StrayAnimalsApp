@@ -81,7 +81,7 @@ class HomeViewController: MainCityViewController , DoubleTextViewDelegate {
     }
     
     private func setNav() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "附近", titleClocr: UIColor.blackColor(), targer: self, action: #selector(HomeViewController.nearClick))
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "附近", titleClocr: UIColor.blackColor(), targer: self, action: #selector(HomeViewController.nearClick))
         doubleTextView = DoubleTextView(leftText: "探索", rigthText: "幫助");
         doubleTextView.frame = CGRectMake(0, 0, 120, 44)
         doubleTextView.delegate = self
@@ -144,7 +144,6 @@ class HomeViewController: MainCityViewController , DoubleTextViewDelegate {
     
     /// 附近action
     func nearClick() {
-        //        let nearVC = NearViewController()
         let nearVC = NewfeatureCollectionViewController()
         navigationController?.pushViewController(nearVC, animated: true)
     }

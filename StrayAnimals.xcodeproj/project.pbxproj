@@ -69,6 +69,7 @@
 		DB9C20BD1E45CF95001D99EF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20BB1E45CF95001D99EF /* AboutViewController.swift */; };
 		DB9C20BE1E45CF95001D99EF /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB9C20BC1E45CF95001D99EF /* AboutViewController.xib */; };
 		DB9C20C01E45E136001D99EF /* FileTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20BF1E45E136001D99EF /* FileTool.swift */; };
+		DB9C20C51E46D7CC001D99EF /* ZYCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20C41E46D7CC001D99EF /* ZYCollection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +139,7 @@
 		DB9C20BB1E45CF95001D99EF /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		DB9C20BC1E45CF95001D99EF /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		DB9C20BF1E45E136001D99EF /* FileTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileTool.swift; sourceTree = "<group>"; };
+		DB9C20C41E46D7CC001D99EF /* ZYCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYCollection.swift; sourceTree = "<group>"; };
 		F2C09C71EE3AB645CAFC0A0C /* Pods-StrayAnimals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StrayAnimals.release.xcconfig"; path = "Pods/Target Support Files/Pods-StrayAnimals/Pods-StrayAnimals.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -277,7 +279,9 @@
 		DB0610BF1D92389C00567BC2 /* Classify */ = {
 			isa = PBXGroup;
 			children = (
-				DB0610C41D92395300567BC2 /* ClassifyViewController.swift */,
+				DB9C20C31E46D6F6001D99EF /* Model */,
+				DB9C20C21E46D6EF001D99EF /* View */,
+				DB9C20C11E46D6E9001D99EF /* Controller */,
 			);
 			name = Classify;
 			sourceTree = "<group>";
@@ -417,6 +421,29 @@
 				DB9C20B31E4488B9001D99EF /* FeedBackViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		DB9C20C11E46D6E9001D99EF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DB0610C41D92395300567BC2 /* ClassifyViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		DB9C20C21E46D6EF001D99EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		DB9C20C31E46D6F6001D99EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB9C20C41E46D7CC001D99EF /* ZYCollection.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -614,6 +641,7 @@
 				DB0610BB1D9223EA00567BC2 /* NavigationController.swift in Sources */,
 				DB81B2CD1D92961000EE7068 /* NetworkTool.swift in Sources */,
 				DB81B2D51D92AA4B00EE7068 /* HomeDetailViewController.swift in Sources */,
+				DB9C20C51E46D7CC001D99EF /* ZYCollection.swift in Sources */,
 				DB0610C91D925B3600567BC2 /* MainCityViewController.swift in Sources */,
 				DB81B2EE1D937E3000EE7068 /* CityCollectionViewCell.swift in Sources */,
 				DB81B2EA1D9370BE00EE7068 /* UIBarButton.swift in Sources */,
