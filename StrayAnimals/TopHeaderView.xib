@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TopHeaderView" customModule="StrayAnimals" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="xxf-7p-vWY">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分類" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyE-DE-M7b">
+                    <rect key="frame" x="10" y="0.0" width="50" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="chI-Qz-cl5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7l-kl-zTM">
+                    <rect key="frame" x="245" y="0.0" width="65" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="65" id="3D7-a9-9fO"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="viewAllButton:" destination="-1" eventType="touchUpInside" id="iqX-z4-zUH"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="fyE-DE-M7b" firstAttribute="leading" secondItem="xxf-7p-vWY" secondAttribute="leading" constant="10" id="6iy-Yl-SqS"/>
+                <constraint firstItem="fyE-DE-M7b" firstAttribute="top" secondItem="xxf-7p-vWY" secondAttribute="top" id="QUc-PZ-dvC"/>
+                <constraint firstItem="fyE-DE-M7b" firstAttribute="top" secondItem="M7l-kl-zTM" secondAttribute="top" id="SXM-Et-UJo"/>
+                <constraint firstItem="fyE-DE-M7b" firstAttribute="bottom" secondItem="M7l-kl-zTM" secondAttribute="bottom" id="eSX-gR-mqN"/>
+                <constraint firstAttribute="bottom" secondItem="fyE-DE-M7b" secondAttribute="bottom" id="fvM-r3-IQL"/>
+                <constraint firstAttribute="trailing" secondItem="M7l-kl-zTM" secondAttribute="trailing" constant="10" id="oPv-7x-wCr"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="220" y="341"/>
+        </view>
+    </objects>
+</document>

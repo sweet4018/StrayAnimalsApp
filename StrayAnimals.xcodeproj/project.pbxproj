@@ -70,6 +70,9 @@
 		DB9C20BE1E45CF95001D99EF /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB9C20BC1E45CF95001D99EF /* AboutViewController.xib */; };
 		DB9C20C01E45E136001D99EF /* FileTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20BF1E45E136001D99EF /* FileTool.swift */; };
 		DB9C20C51E46D7CC001D99EF /* ZYCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20C41E46D7CC001D99EF /* ZYCollection.swift */; };
+		DB9C20C81E46F122001D99EF /* TopHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20C61E46F122001D99EF /* TopHeaderView.swift */; };
+		DB9C20C91E46F122001D99EF /* TopHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB9C20C71E46F122001D99EF /* TopHeaderView.xib */; };
+		DB9C20CC1E4734DB001D99EF /* ClassifyHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20CB1E4734DB001D99EF /* ClassifyHeaderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,6 +143,9 @@
 		DB9C20BC1E45CF95001D99EF /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		DB9C20BF1E45E136001D99EF /* FileTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileTool.swift; sourceTree = "<group>"; };
 		DB9C20C41E46D7CC001D99EF /* ZYCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYCollection.swift; sourceTree = "<group>"; };
+		DB9C20C61E46F122001D99EF /* TopHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopHeaderView.swift; sourceTree = "<group>"; };
+		DB9C20C71E46F122001D99EF /* TopHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopHeaderView.xib; sourceTree = "<group>"; };
+		DB9C20CB1E4734DB001D99EF /* ClassifyHeaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassifyHeaderViewController.swift; sourceTree = "<group>"; };
 		F2C09C71EE3AB645CAFC0A0C /* Pods-StrayAnimals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StrayAnimals.release.xcconfig"; path = "Pods/Target Support Files/Pods-StrayAnimals/Pods-StrayAnimals.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -427,6 +433,7 @@
 			isa = PBXGroup;
 			children = (
 				DB0610C41D92395300567BC2 /* ClassifyViewController.swift */,
+				DB9C20CB1E4734DB001D99EF /* ClassifyHeaderViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -434,6 +441,8 @@
 		DB9C20C21E46D6EF001D99EF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DB9C20C61E46F122001D99EF /* TopHeaderView.swift */,
+				DB9C20C71E46F122001D99EF /* TopHeaderView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -520,6 +529,7 @@
 				DB81B3171D990C1600EE7068 /* HomeDetailCollectionViewCell.xib in Resources */,
 				DB81B31D1D9A10ED00EE7068 /* DetailChoiceButtonView.xib in Resources */,
 				DB81B3231D9AA9CD00EE7068 /* EventCellTableViewCell.xib in Resources */,
+				DB9C20C91E46F122001D99EF /* TopHeaderView.xib in Resources */,
 				DB81B2E81D936D8B00EE7068 /* themes in Resources */,
 				DB81B2E51D936D7100EE7068 /* Details in Resources */,
 				DB81B30F1D98EBA100EE7068 /* HomeDetailToolBar.xib in Resources */,
@@ -637,12 +647,14 @@
 				DB81B31C1D9A10ED00EE7068 /* DetailChoiceButtonView.swift in Sources */,
 				DB9C20B41E4488B9001D99EF /* FeedBackViewController.swift in Sources */,
 				DB81B2CB1D928E4800EE7068 /* Animals.swift in Sources */,
+				DB9C20C81E46F122001D99EF /* TopHeaderView.swift in Sources */,
 				DB81B30B1D98A55F00EE7068 /* BaseViewController.swift in Sources */,
 				DB0610BB1D9223EA00567BC2 /* NavigationController.swift in Sources */,
 				DB81B2CD1D92961000EE7068 /* NetworkTool.swift in Sources */,
 				DB81B2D51D92AA4B00EE7068 /* HomeDetailViewController.swift in Sources */,
 				DB9C20C51E46D7CC001D99EF /* ZYCollection.swift in Sources */,
 				DB0610C91D925B3600567BC2 /* MainCityViewController.swift in Sources */,
+				DB9C20CC1E4734DB001D99EF /* ClassifyHeaderViewController.swift in Sources */,
 				DB81B2EE1D937E3000EE7068 /* CityCollectionViewCell.swift in Sources */,
 				DB81B2EA1D9370BE00EE7068 /* UIBarButton.swift in Sources */,
 				DB0610BE1D92324500567BC2 /* UIColor.swift in Sources */,

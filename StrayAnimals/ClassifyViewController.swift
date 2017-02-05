@@ -10,21 +10,10 @@ import UIKit
 
 class ClassifyViewController: BaseViewController {
 
-    var collections = [YMCollection]()
-    
-    var collectionView: UICollectionView?
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "search_1"), style: ., target: <#T##AnyObject?#>, action: <#T##Selector#>)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
- 
     
 }
