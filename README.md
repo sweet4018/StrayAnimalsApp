@@ -38,7 +38,6 @@
 * 從`AppDelegate.swift`啟動程序
 ```
 	 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
     var window: UIWindow?
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {        
         //創建window
@@ -64,7 +63,6 @@ class TabBarController: UITabBarController {
         setUpAllChildViewController()
         self.setValue(MainTabBar(), forKey: "tabBar")
     }
-    
     private func setUpAllChildViewController(){
         //首頁
         tabBarAddChildViewController(vc: HomeViewController(), title: "首頁", imageName: "recommendation_1", selectedImageName: "recommendation_2")
@@ -75,14 +73,12 @@ class TabBarController: UITabBarController {
         //我的
         tabBarAddChildViewController(vc: MeViewController(), title: "我的", imageName: "my_1", selectedImageName: "my_2")
     }
-
     private func tabBarAddChildViewController(vc vc:UIViewController, title:String, imageName:String, selectedImageName:String){
         vc.tabBarItem = UITabBarItem(title: title, image: UIImage(named: imageName), selectedImage: UIImage(named: selectedImageName))
         vc.view.backgroundColor = theme.BackgroundColor
         let nav = NavigationController(rootViewController: vc)
         addChildViewController(nav)
-    }
-    
+    }   
 class MainTabBar : UITabBar {
         override init(frame: CGRect) {
             super.init(frame: frame)
@@ -96,11 +92,11 @@ class MainTabBar : UITabBar {
 }
 
 ```
-* 則左上角的城市作法是提供一個父類別`MianCityViewController.swift`，設置navigationItem.leftBarButtonItem為自定義的按鈕，並且在viewDidLoad：方法中，添加通知，監聽城市的改變，一旦監聽到當前城市發生改變的通知後，對應的控制器就可以執行對應的操作，需要注意的 每次要將改變後的城市寫入到本地持久化存儲，以便程序被關閉後再次運行時，可以保留上次用戶選擇的城市，選擇城市的控制器是`CityViewController`，城市展示是用UICollectionView，用戶上一次選擇的城市都會自動進入選中狀態，具體實現是拿出上一次用戶選擇的城市，遍歷城市列表取出所屬的indexPath,然後執行下面方法
+* 則左上角的城市作法是提供一個父類別`MianCityViewController.swift`，設置navigationItem.leftBarButtonItem為自定義的按鈕，並且在viewDidLoad：方法中，添加通知，監聽城市的改變，一旦監聽到當前城市發生改變的通知後，對應的控制器就可以執行對應的操作，需要注意的 每次要將改變後的城市寫入到本地持久化存儲，以便程序被關閉後再次運行時，可以保留上次用戶選擇的城市，選擇城市的控制器是`CityViewController`，城市展示是用UICollectionView，需要注意每次ViewController彈出後，用戶上一次選擇的城市都會自動進入選中狀態，具體實現是拿出上一次用戶選擇的城市，遍歷城市列表取出所屬的indexPath,然後執行下面方法
 
 ```
-        let lastSelectedCityIndexPaht = selectedCurrentCity()
-        collView.selectItemAtIndexPath(lastSelectedCityIndexPaht, animated: true, scrollPosition: 	UICollectionViewScrollPosition.None)
+                let lastSelectedCityIndexPaht = selectedCurrentCity()
+        collView.selectItemAtIndexPath(lastSelectedCityIndexPaht, animated: true, scrollPosition: UICollectionViewScrollPosition.None)
 ```
 ****
 [首頁-探索下拉刷新、動物詳情、收容所詳情、撥打電話、分享]
