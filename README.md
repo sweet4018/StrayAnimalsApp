@@ -55,6 +55,47 @@
         return true
     }
 ```
+* `TabBar`作法
+```
+class TabBarController: UITabBarController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUpAllChildViewController()
+        self.setValue(MainTabBar(), forKey: "tabBar")
+    }
+    
+    private func setUpAllChildViewController(){
+        //首頁
+        tabBarAddChildViewController(vc: HomeViewController(), title: "首頁", imageName: "recommendation_1", selectedImageName: "recommendation_2")
+        //最愛
+        tabBarAddChildViewController(vc: FavoriteViewController(), title: "最愛", imageName: "broadwood_1", selectedImageName: "broadwood_2")
+        //分類
+        tabBarAddChildViewController(vc: ClassifyViewController(), title: "分類", imageName: "classification_1", selectedImageName: "classification_2")
+        //我的
+        tabBarAddChildViewController(vc: MeViewController(), title: "我的", imageName: "my_1", selectedImageName: "my_2")
+    }
+
+    private func tabBarAddChildViewController(vc vc:UIViewController, title:String, imageName:String, selectedImageName:String){
+        vc.tabBarItem = UITabBarItem(title: title, image: UIImage(named: imageName), selectedImage: UIImage(named: selectedImageName))
+        vc.view.backgroundColor = theme.BackgroundColor
+        let nav = NavigationController(rootViewController: vc)
+        addChildViewController(nav)
+    }
+    
+class MainTabBar : UITabBar {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            self.translucent = true
+            self.backgroundImage = UIImage(named: "tabbar")
+        }
+        required init?(coder aDecoder:NSCoder){
+            super.init(coder: aDecoder)
+        }
+    }
+}
+
+```
 ****
 [首頁-探索下拉刷新、動物詳情、收容所詳情、撥打電話、分享]
 
