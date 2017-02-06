@@ -30,4 +30,12 @@
 	
 ##截圖
 [架構] <img src ="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/架構.png">
+****
+[引導畫面]
 
+<img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-06-2017%2012-16-47.gif" , height=500>
+****
+[下拉刷新、動物詳情、收容所詳情、撥打電話]
+
+<img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-06-2017%2014-31-40.gif" , height=500>
+****
