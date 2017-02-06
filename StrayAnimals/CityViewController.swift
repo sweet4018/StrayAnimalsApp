@@ -51,14 +51,12 @@ class CityViewController: UIViewController {
                 }
             }
         }
-        
         return NSIndexPath(forItem: 0, inSection: 0)
     }
     
     func setNav() {
         view.backgroundColor = theme.BackgroundColor
         navigationItem.title = "選擇城市"
-        //        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "取消", titleClocr: UIColor.blackColor(), targer: self, action: "cancle")
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "取消", style: .Done, target: self, action: "cancle")
     }
     

@@ -14,7 +14,6 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         setUpAllChildViewController()
         self.setValue(MainTabBar(), forKey: "tabBar")
-        // Do any additional setup after loading the view.
     }
     
     private func setUpAllChildViewController(){
