@@ -34,7 +34,26 @@
 ****
 [引導畫面、選擇城市]
 
-<img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-06-2017%2012-16-47.gif" , height=500>
+<img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-06-2017%2012-16-47.gif" , height=500>	
+
+
+	class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    var window: UIWindow?
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {        
+        //創建window
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window?.makeKeyAndVisible()
+        //檢測第一次啟動？
+         if !NSUserDefaults.standardUserDefaults().boolForKey(firstLuanch){
+            window?.rootViewController = NewfeatureCollectionViewController()
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: firstLuanch)
+         }else{
+            window?.rootViewController = TabBarController()
+        }
+        setAppAppearance()
+        return true
+    }
 
 ****
 [首頁-探索下拉刷新、動物詳情、收容所詳情、撥打電話、分享]
