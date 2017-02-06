@@ -93,7 +93,6 @@ class MainTabBar : UITabBar {
 
 ```
 * 則左上角的城市作法是提供一個父類別`MianCityViewController.swift`，設置navigationItem.leftBarButtonItem為自定義的按鈕，並且在viewDidLoad：方法中，添加通知，監聽城市的改變，一旦監聽到當前城市發生改變的通知後，對應的控制器就可以執行對應的操作，需要注意的 每次要將改變後的城市寫入到本地持久化存儲，以便程序被關閉後再次運行時，可以保留上次用戶選擇的城市，選擇城市的控制器是`CityViewController`，城市展示是用UICollectionView，需要注意每次ViewController彈出後，用戶上一次選擇的城市都會自動進入選中狀態，具體實現是拿出上一次用戶選擇的城市，遍歷城市列表取出所屬的indexPath,然後執行下面方法
-
 ```
                 let lastSelectedCityIndexPaht = selectedCurrentCity()
         collView.selectItemAtIndexPath(lastSelectedCityIndexPaht, animated: true, scrollPosition: UICollectionViewScrollPosition.None)
@@ -103,6 +102,7 @@ class MainTabBar : UITabBar {
 
 <img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-06-2017%2014-31-40.gif" , height=500>
 
+* 導航條上的探索和幫助是將navigationItem.titleView 設置為自定義的``DoubleTextView`來實現,內部封裝好功能,並且通過設置代理將點擊事件傳遞給控制器，在view的最底層添加一個scrollView，設置scorllView的contentSize為屏幕的寬度的2倍，在scrollView上添加倆個TableView，分別是探索的TableView和幫助的TabelView
 ****
 [首頁-打開地圖、導航、切換行人、汽車模式、路徑步驟]
 
