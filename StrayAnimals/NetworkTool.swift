@@ -39,34 +39,5 @@ class NetworkTool: NSObject {
                 }
         }
     }
- 
-    /// 分类界面 风格,品类
-    func loadCategoryGroup(finished:(outGroups: [AnyObject]) -> ()) {
-        SVProgressHUD.showWithStatus("正在加载...")
-
-                    let path = NSBundle.mainBundle().pathForResource("themes", ofType: nil)
-                    let dict = JSON(path!)
-                    let code = dict["code"].intValue
-                    let message = dict["message"].stringValue                    
-                    SVProgressHUD.dismiss()
-                    if let data = dict["data"].dictionary {
-                        if let channel_groups = data["channel_groups"]?.arrayObject {
-                            // outGroups 存储两个 inGroups 数组，inGroups 存储 YMGroup 对象
-                            // outGroups 是一个二维数组
-                            var outGroups = [AnyObject]()
-                            for channel_group in channel_groups {
-                                var inGroups = [ZYGroup]()
-                                let channels = channel_group["channels"] as! [AnyObject]
-                                for channel in channels {
-                                    let group = ZYGroup(dict: channel as! [String: AnyObject])
-                                    inGroups.append(group)
-                                }
-                                outGroups.append(inGroups)
-                            }
-                            finished(outGroups: outGroups)
-                        }
-                    }
-                
-        }
-    }
+}
 

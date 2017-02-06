@@ -22,11 +22,9 @@ class HomeViewController: MainCityViewController , DoubleTextViewDelegate {
     //加入DoubleTextView
     private var backgroundScrollView: UIScrollView!
     private var doubleTextView: DoubleTextView!
-    private var everyDays: EveryDays?
     private var albumTableView: MainTableView!
     private var dayTableView: MainTableView!
     private var themes: ThemeModels?
-    private var events: EveryDays?
     
     override func viewDidLoad() {
         super.viewDidLoad()

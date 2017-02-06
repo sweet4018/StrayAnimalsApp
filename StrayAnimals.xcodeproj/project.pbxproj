@@ -40,7 +40,6 @@
 		DB81B2DF1D936CE000EE7068 /* EveryDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB81B2DE1D936CE000EE7068 /* EveryDays.swift */; };
 		DB81B2E11D936D0F00EE7068 /* SwiftDictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB81B2E01D936D0F00EE7068 /* SwiftDictModel.swift */; };
 		DB81B2E51D936D7100EE7068 /* Details in Resources */ = {isa = PBXBuildFile; fileRef = DB81B2E31D936D7100EE7068 /* Details */; };
-		DB81B2E61D936D7100EE7068 /* events in Resources */ = {isa = PBXBuildFile; fileRef = DB81B2E41D936D7100EE7068 /* events */; };
 		DB81B2E81D936D8B00EE7068 /* themes in Resources */ = {isa = PBXBuildFile; fileRef = DB81B2E71D936D8B00EE7068 /* themes */; };
 		DB81B2EA1D9370BE00EE7068 /* UIBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB81B2E91D9370BE00EE7068 /* UIBarButton.swift */; };
 		DB81B2EC1D937BDE00EE7068 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB81B2EB1D937BDE00EE7068 /* CityViewController.swift */; };
@@ -61,24 +60,12 @@
 		DB81B3191D9A0CFF00EE7068 /* HomeDetailButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB81B3181D9A0CFF00EE7068 /* HomeDetailButtonView.swift */; };
 		DB81B31C1D9A10ED00EE7068 /* DetailChoiceButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB81B31A1D9A10ED00EE7068 /* DetailChoiceButtonView.swift */; };
 		DB81B31D1D9A10ED00EE7068 /* DetailChoiceButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB81B31B1D9A10ED00EE7068 /* DetailChoiceButtonView.xib */; };
-		DB81B3221D9AA9CD00EE7068 /* EventCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB81B3201D9AA9CD00EE7068 /* EventCellTableViewCell.swift */; };
-		DB81B3231D9AA9CD00EE7068 /* EventCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB81B3211D9AA9CD00EE7068 /* EventCellTableViewCell.xib */; };
 		DB81B3301D9CBD6200EE7068 /* ShopDetailContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB81B32E1D9CBD6200EE7068 /* ShopDetailContentView.swift */; };
 		DB81B3311D9CBD6200EE7068 /* ShopDetailContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB81B32F1D9CBD6200EE7068 /* ShopDetailContentView.xib */; };
 		DB9C20B41E4488B9001D99EF /* FeedBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20B31E4488B9001D99EF /* FeedBackViewController.swift */; };
 		DB9C20BD1E45CF95001D99EF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20BB1E45CF95001D99EF /* AboutViewController.swift */; };
 		DB9C20BE1E45CF95001D99EF /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB9C20BC1E45CF95001D99EF /* AboutViewController.xib */; };
 		DB9C20C01E45E136001D99EF /* FileTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20BF1E45E136001D99EF /* FileTool.swift */; };
-		DB9C20C51E46D7CC001D99EF /* ZYCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20C41E46D7CC001D99EF /* ZYCollection.swift */; };
-		DB9C20C81E46F122001D99EF /* TopHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20C61E46F122001D99EF /* TopHeaderView.swift */; };
-		DB9C20C91E46F122001D99EF /* TopHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB9C20C71E46F122001D99EF /* TopHeaderView.xib */; };
-		DB9C20CC1E4734DB001D99EF /* ClassifyHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20CB1E4734DB001D99EF /* ClassifyHeaderViewController.swift */; };
-		DB9C20CE1E473DE9001D99EF /* ClassifyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20CD1E473DE9001D99EF /* ClassifyButtonView.swift */; };
-		DB9C20D01E473F5B001D99EF /* classify in Resources */ = {isa = PBXBuildFile; fileRef = DB9C20CF1E473F5B001D99EF /* classify */; };
-		DB9C20D21E474572001D99EF /* ZYGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20D11E474572001D99EF /* ZYGroup.swift */; };
-		DB9C20D41E4747C0001D99EF /* VerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20D31E4747C0001D99EF /* VerticalButton.swift */; };
-		DB9C20D91E474CB0001D99EF /* ClassifyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20D71E474CB0001D99EF /* ClassifyCollectionViewCell.swift */; };
-		DB9C20DA1E474CB0001D99EF /* ClassifyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB9C20D81E474CB0001D99EF /* ClassifyCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,7 +105,6 @@
 		DB81B2DE1D936CE000EE7068 /* EveryDays.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EveryDays.swift; sourceTree = "<group>"; };
 		DB81B2E01D936D0F00EE7068 /* SwiftDictModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDictModel.swift; sourceTree = "<group>"; };
 		DB81B2E31D936D7100EE7068 /* Details */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Details; sourceTree = "<group>"; };
-		DB81B2E41D936D7100EE7068 /* events */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = events; sourceTree = "<group>"; };
 		DB81B2E71D936D8B00EE7068 /* themes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = themes; sourceTree = "<group>"; };
 		DB81B2E91D9370BE00EE7068 /* UIBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButton.swift; sourceTree = "<group>"; };
 		DB81B2EB1D937BDE00EE7068 /* CityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
@@ -140,24 +126,12 @@
 		DB81B3181D9A0CFF00EE7068 /* HomeDetailButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDetailButtonView.swift; sourceTree = "<group>"; };
 		DB81B31A1D9A10ED00EE7068 /* DetailChoiceButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailChoiceButtonView.swift; sourceTree = "<group>"; };
 		DB81B31B1D9A10ED00EE7068 /* DetailChoiceButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailChoiceButtonView.xib; sourceTree = "<group>"; };
-		DB81B3201D9AA9CD00EE7068 /* EventCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCellTableViewCell.swift; sourceTree = "<group>"; };
-		DB81B3211D9AA9CD00EE7068 /* EventCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventCellTableViewCell.xib; sourceTree = "<group>"; };
 		DB81B32E1D9CBD6200EE7068 /* ShopDetailContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopDetailContentView.swift; sourceTree = "<group>"; };
 		DB81B32F1D9CBD6200EE7068 /* ShopDetailContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopDetailContentView.xib; sourceTree = "<group>"; };
 		DB9C20B31E4488B9001D99EF /* FeedBackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedBackViewController.swift; sourceTree = "<group>"; };
 		DB9C20BB1E45CF95001D99EF /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		DB9C20BC1E45CF95001D99EF /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		DB9C20BF1E45E136001D99EF /* FileTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileTool.swift; sourceTree = "<group>"; };
-		DB9C20C41E46D7CC001D99EF /* ZYCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYCollection.swift; sourceTree = "<group>"; };
-		DB9C20C61E46F122001D99EF /* TopHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopHeaderView.swift; sourceTree = "<group>"; };
-		DB9C20C71E46F122001D99EF /* TopHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopHeaderView.xib; sourceTree = "<group>"; };
-		DB9C20CB1E4734DB001D99EF /* ClassifyHeaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassifyHeaderViewController.swift; sourceTree = "<group>"; };
-		DB9C20CD1E473DE9001D99EF /* ClassifyButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassifyButtonView.swift; sourceTree = "<group>"; };
-		DB9C20CF1E473F5B001D99EF /* classify */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = classify; sourceTree = "<group>"; };
-		DB9C20D11E474572001D99EF /* ZYGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYGroup.swift; sourceTree = "<group>"; };
-		DB9C20D31E4747C0001D99EF /* VerticalButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalButton.swift; sourceTree = "<group>"; };
-		DB9C20D71E474CB0001D99EF /* ClassifyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassifyCollectionViewCell.swift; sourceTree = "<group>"; };
-		DB9C20D81E474CB0001D99EF /* ClassifyCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassifyCollectionViewCell.xib; sourceTree = "<group>"; };
 		F2C09C71EE3AB645CAFC0A0C /* Pods-StrayAnimals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StrayAnimals.release.xcconfig"; path = "Pods/Target Support Files/Pods-StrayAnimals/Pods-StrayAnimals.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -361,8 +335,6 @@
 				DB81B3181D9A0CFF00EE7068 /* HomeDetailButtonView.swift */,
 				DB81B31A1D9A10ED00EE7068 /* DetailChoiceButtonView.swift */,
 				DB81B31B1D9A10ED00EE7068 /* DetailChoiceButtonView.xib */,
-				DB81B3201D9AA9CD00EE7068 /* EventCellTableViewCell.swift */,
-				DB81B3211D9AA9CD00EE7068 /* EventCellTableViewCell.xib */,
 				DB0873C61D9E0CBB00972FFD /* AnimalViewCell.swift */,
 				DB0873C71D9E0CBB00972FFD /* AnimalViewCell.xib */,
 				DB81B32E1D9CBD6200EE7068 /* ShopDetailContentView.swift */,
@@ -389,8 +361,6 @@
 			children = (
 				DB81B2E71D936D8B00EE7068 /* themes */,
 				DB81B2E31D936D7100EE7068 /* Details */,
-				DB81B2E41D936D7100EE7068 /* events */,
-				DB9C20CF1E473F5B001D99EF /* classify */,
 			);
 			name = CustomData;
 			sourceTree = "<group>";
@@ -446,7 +416,6 @@
 			isa = PBXGroup;
 			children = (
 				DB0610C41D92395300567BC2 /* ClassifyViewController.swift */,
-				DB9C20CB1E4734DB001D99EF /* ClassifyHeaderViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -454,12 +423,6 @@
 		DB9C20C21E46D6EF001D99EF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DB9C20CD1E473DE9001D99EF /* ClassifyButtonView.swift */,
-				DB9C20C61E46F122001D99EF /* TopHeaderView.swift */,
-				DB9C20C71E46F122001D99EF /* TopHeaderView.xib */,
-				DB9C20D31E4747C0001D99EF /* VerticalButton.swift */,
-				DB9C20D71E474CB0001D99EF /* ClassifyCollectionViewCell.swift */,
-				DB9C20D81E474CB0001D99EF /* ClassifyCollectionViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -467,8 +430,6 @@
 		DB9C20C31E46D6F6001D99EF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DB9C20C41E46D7CC001D99EF /* ZYCollection.swift */,
-				DB9C20D11E474572001D99EF /* ZYGroup.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -540,20 +501,15 @@
 			files = (
 				DB0873C91D9E0CBB00972FFD /* AnimalViewCell.xib in Resources */,
 				DB81B3091D96638000EE7068 /* ThemeCell.xib in Resources */,
-				DB81B2E61D936D7100EE7068 /* events in Resources */,
 				DB5863101D8FD58500E17C9C /* LaunchScreen.storyboard in Resources */,
 				DB9C20BE1E45CF95001D99EF /* AboutViewController.xib in Resources */,
 				DB7D1A781DAB7DAB00A99D3B /* MapTableViewCell.xib in Resources */,
 				DB81B3171D990C1600EE7068 /* HomeDetailCollectionViewCell.xib in Resources */,
 				DB81B31D1D9A10ED00EE7068 /* DetailChoiceButtonView.xib in Resources */,
-				DB9C20DA1E474CB0001D99EF /* ClassifyCollectionViewCell.xib in Resources */,
-				DB81B3231D9AA9CD00EE7068 /* EventCellTableViewCell.xib in Resources */,
-				DB9C20C91E46F122001D99EF /* TopHeaderView.xib in Resources */,
 				DB81B2E81D936D8B00EE7068 /* themes in Resources */,
 				DB81B2E51D936D7100EE7068 /* Details in Resources */,
 				DB81B30F1D98EBA100EE7068 /* HomeDetailToolBar.xib in Resources */,
 				DB58630D1D8FD58500E17C9C /* Assets.xcassets in Resources */,
-				DB9C20D01E473F5B001D99EF /* classify in Resources */,
 				DB81B2D11D929C5300EE7068 /* CollectionViewCell.xib in Resources */,
 				DB81B3311D9CBD6200EE7068 /* ShopDetailContentView.xib in Resources */,
 			);
@@ -667,19 +623,15 @@
 				DB81B31C1D9A10ED00EE7068 /* DetailChoiceButtonView.swift in Sources */,
 				DB9C20B41E4488B9001D99EF /* FeedBackViewController.swift in Sources */,
 				DB81B2CB1D928E4800EE7068 /* Animals.swift in Sources */,
-				DB9C20C81E46F122001D99EF /* TopHeaderView.swift in Sources */,
 				DB81B30B1D98A55F00EE7068 /* BaseViewController.swift in Sources */,
 				DB0610BB1D9223EA00567BC2 /* NavigationController.swift in Sources */,
 				DB81B2CD1D92961000EE7068 /* NetworkTool.swift in Sources */,
 				DB81B2D51D92AA4B00EE7068 /* HomeDetailViewController.swift in Sources */,
-				DB9C20C51E46D7CC001D99EF /* ZYCollection.swift in Sources */,
 				DB0610C91D925B3600567BC2 /* MainCityViewController.swift in Sources */,
-				DB9C20CC1E4734DB001D99EF /* ClassifyHeaderViewController.swift in Sources */,
 				DB81B2EE1D937E3000EE7068 /* CityCollectionViewCell.swift in Sources */,
 				DB81B2EA1D9370BE00EE7068 /* UIBarButton.swift in Sources */,
 				DB0610BE1D92324500567BC2 /* UIColor.swift in Sources */,
 				DB81B3081D96638000EE7068 /* ThemeCell.swift in Sources */,
-				DB9C20D41E4747C0001D99EF /* VerticalButton.swift in Sources */,
 				DB81B2E11D936D0F00EE7068 /* SwiftDictModel.swift in Sources */,
 				DB81B3111D99090800EE7068 /* HomeDetailScrollView.swift in Sources */,
 				DB0610C51D92395300567BC2 /* ClassifyViewController.swift in Sources */,
@@ -691,13 +643,9 @@
 				DB0610B91D91372100567BC2 /* TabBarController.swift in Sources */,
 				DB81B2FA1D93A86500EE7068 /* UIImageVIew.swift in Sources */,
 				DB0610AB1D91283F00567BC2 /* Const.swift in Sources */,
-				DB9C20D91E474CB0001D99EF /* ClassifyCollectionViewCell.swift in Sources */,
-				DB9C20CE1E473DE9001D99EF /* ClassifyButtonView.swift in Sources */,
 				DB9C20C01E45E136001D99EF /* FileTool.swift in Sources */,
-				DB81B3221D9AA9CD00EE7068 /* EventCellTableViewCell.swift in Sources */,
 				DB81B30E1D98EBA100EE7068 /* HomeDetailToolBar.swift in Sources */,
 				DB81B2D01D929C5300EE7068 /* CollectionViewCell.swift in Sources */,
-				DB9C20D21E474572001D99EF /* ZYGroup.swift in Sources */,
 				DB81B2DF1D936CE000EE7068 /* EveryDays.swift in Sources */,
 				DB0610C11D92392F00567BC2 /* HomeViewController.swift in Sources */,
 				DB81B3301D9CBD6200EE7068 /* ShopDetailContentView.swift in Sources */,
