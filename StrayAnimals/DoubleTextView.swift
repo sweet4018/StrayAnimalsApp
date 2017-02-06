@@ -29,12 +29,10 @@ class DoubleTextView: UIView {
         
         titleButtonClick(leftTextButton)
     }
-
     private func setBottomLineView() {
         bottomLineView.backgroundColor = UIColor(red: 60 / 255.0, green: 60 / 255.0, blue: 60 / 255.0, alpha: 1)
         addSubview(bottomLineView)
     }
-    
     private func setButton(button: UIButton, title: String, tag: Int) {
         button.setTitleColor(UIColor.blackColor(), forState: .Selected)
         button.setTitleColor(textColorFroNormal, forState: .Normal)

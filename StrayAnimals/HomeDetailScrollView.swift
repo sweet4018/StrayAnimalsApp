@@ -16,25 +16,18 @@ class HomeDetailScrollView: UIScrollView {
             buttonScrollView.animal = animal
         }
     }
-    
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         setupUI()
     }
-
     func setupUI() {
-        
         addSubview(topScrollView)
         addSubview(buttonScrollView)
-        
         topScrollView.snp_makeConstraints { (make) in
             make.left.equalTo(self)
             make.top.equalTo(self)
             make.size.equalTo(CGSizeMake(ScreenWidth, ScreenWidth))
         }
-        
         buttonScrollView.snp_makeConstraints { (make) in
             make.left.equalTo(self)
             make.top.equalTo(topScrollView.snp_bottom).offset(kMargin)
