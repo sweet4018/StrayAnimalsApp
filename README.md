@@ -103,6 +103,7 @@ class MainTabBar : UITabBar {
 <img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-06-2017%2014-31-40.gif" , height=500>
 
 * 導航條上的探索和幫助是將navigationItem.titleView 設置為自定義的`DoubleTextView`來實現,內部封裝好功能,並且通過設置代理將點擊事件傳遞給控制器，在view的最底層添加一個scrollView，設置scorllView的contentSize為屏幕的寬度的2倍，在scrollView上添加倆個TableView，分別是探索的TableView和幫助的TabelView
+
 ****
 [首頁-打開地圖、導航、切換行人、汽車模式、路徑步驟]
 
