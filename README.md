@@ -30,12 +30,28 @@
 	
 ##截圖
 [架構] <img src ="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/架構.png">
+
 ****
-[引導畫面]
+[引導畫面、選擇城市]
 
 <img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-06-2017%2012-16-47.gif" , height=500>
+
 ****
-[下拉刷新、動物詳情、收容所詳情、撥打電話]
+[首頁-探索下拉刷新、動物詳情、收容所詳情、撥打電話、分享]
 
 <img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-06-2017%2014-31-40.gif" , height=500>
+
 ****
+[首頁-打開地圖、導航、切換行人、汽車模式、路徑步驟]
+
+<img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-06-2017%2014-39-28.gif" , height=500>
+
+****
+[首頁-幫助]
+
+<img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-06-2017%2014-41-10.gif" , height=500>
+
+****
+[我的]
+
+<img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-06-2017%2014-46-06.gif" , height=500>
