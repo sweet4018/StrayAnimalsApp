@@ -1,0 +1,123 @@
+{
+code: 200,
+data: {
+channel_groups: [
+{
+channels: [
+{
+group_id: 1,
+icon_url: "http://7fvaoh.com3.z0.glb.qiniucdn.com/image/150715/rvgzyw5sm.png-pw144",
+id: 12,
+items_count: 23,
+name: "创意",
+order: 0,
+status: 0
+},
+{
+group_id: 1,
+icon_url: "http://7fvaoh.com3.z0.glb.qiniucdn.com/image/150715/1w0mv2pus.png-pw144",
+id: 19,
+items_count: 23,
+name: "文艺范",
+order: 0,
+status: 0
+},
+{
+group_id: 1,
+icon_url: "http://7fvaoh.com3.z0.glb.qiniucdn.com/image/150715/tv9xx7b6g.png-pw144",
+id: 20,
+items_count: 14,
+name: "设计感",
+order: 0,
+status: 0
+},
+{
+group_id: 1,
+icon_url: "http://7fvaoh.com3.z0.glb.qiniucdn.com/image/150715/f2ilwnyrj.png-pw144",
+id: 21,
+items_count: 3,
+name: "科技范",
+order: 0,
+status: 0
+}
+],
+id: 1,
+name: "风格",
+order: 3,
+status: 0
+},
+{
+channels: [
+{
+group_id: 2,
+icon_url: "http://7fvaoh.com3.z0.glb.qiniucdn.com/image/150715/v52rr5j3a.png-pw144",
+id: 13,
+items_count: 55,
+name: "美物",
+order: 0,
+status: 0
+},
+{
+group_id: 2,
+icon_url: "http://7fvaoh.com3.z0.glb.qiniucdn.com/image/150715/ai20pa489.png-pw144",
+id: 14,
+items_count: 40,
+name: "美食",
+order: 0,
+status: 0
+},
+{
+group_id: 2,
+icon_url: "http://7fvaoh.com3.z0.glb.qiniucdn.com/image/150715/4oil0qlhz.png-pw144",
+id: 15,
+items_count: 31,
+name: "美护",
+order: 0,
+status: 0
+},
+{
+group_id: 2,
+icon_url: "http://7fvaoh.com3.z0.glb.qiniucdn.com/image/150715/qwjgkxju4.png-pw144",
+id: 16,
+items_count: 62,
+name: "家居",
+order: 0,
+status: 0
+},
+{
+group_id: 2,
+icon_url: "http://7fvaoh.com3.z0.glb.qiniucdn.com/image/150715/9mevxve6t.png-pw144",
+id: 17,
+items_count: 31,
+name: "数码",
+order: 0,
+status: 0
+},
+{
+group_id: 2,
+icon_url: "http://7fvaoh.com3.z0.glb.qiniucdn.com/image/150715/g0j4rieph.png-pw144",
+id: 18,
+items_count: 7,
+name: "运动",
+order: 0,
+status: 0
+},
+{
+group_id: 2,
+icon_url: "http://7fvaoh.com3.z0.glb.qiniucdn.com/image/150715/nnz1d28ut.png-pw144",
+id: 22,
+items_count: 19,
+name: "杂货",
+order: 0,
+status: 0
+}
+],
+id: 2,
+name: "品类",
+order: 2,
+status: 0
+}
+]
+},
+message: "OK"
+}

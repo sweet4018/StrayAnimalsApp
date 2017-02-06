@@ -68,5 +68,9 @@ public let SD_RefreshImage_Width: CGFloat = 35
 /// 動畫時長
 let kAnimationDuration = 0.25
 
+/// 分類界面 頂部 item 的高
+let kitemH: CGFloat = 75
+/// 分類界面 頂部 item 的寬
+let kitemW: CGFloat = 150
 
 

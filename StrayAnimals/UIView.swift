@@ -32,6 +32,7 @@ extension UIView {
     var point: CGPoint {
         return self.frame.origin
     }
+    
     ///xx
     var xx: CGFloat {
         get {
@@ -44,4 +45,50 @@ extension UIView {
         }
     }
 
+    /// width
+    var ZYWidth: CGFloat {
+        get {
+            return frame.size.width
+        }
+        set(newValue) {
+            var tempFrame: CGRect = frame
+            tempFrame.size.width = newValue
+            frame = tempFrame
+        }
+    }
+    /// x
+    var ZYx: CGFloat {
+        get {
+            return frame.origin.x
+        }
+        set(newValue) {
+            var tempFrame: CGRect = frame
+            tempFrame.origin.x    = newValue
+            frame                 = tempFrame
+        }
+    }
+    /// y
+    var ZYy: CGFloat {
+        get {
+            return frame.origin.y
+        }
+        set(newValue) {
+            var tempFrame: CGRect = frame
+            tempFrame.origin.y    = newValue
+            frame                 = tempFrame
+        }
+    }
+    
+    /// height
+    var ZYHeight: CGFloat {
+        get {
+            return frame.size.height
+        }
+        set(newValue) {
+            var tempFrame: CGRect = frame
+            tempFrame.size.height = newValue
+            frame                 = tempFrame
+        }
+    }
+    
 }

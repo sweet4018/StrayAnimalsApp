@@ -73,6 +73,12 @@
 		DB9C20C81E46F122001D99EF /* TopHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20C61E46F122001D99EF /* TopHeaderView.swift */; };
 		DB9C20C91E46F122001D99EF /* TopHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB9C20C71E46F122001D99EF /* TopHeaderView.xib */; };
 		DB9C20CC1E4734DB001D99EF /* ClassifyHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20CB1E4734DB001D99EF /* ClassifyHeaderViewController.swift */; };
+		DB9C20CE1E473DE9001D99EF /* ClassifyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20CD1E473DE9001D99EF /* ClassifyButtonView.swift */; };
+		DB9C20D01E473F5B001D99EF /* classify in Resources */ = {isa = PBXBuildFile; fileRef = DB9C20CF1E473F5B001D99EF /* classify */; };
+		DB9C20D21E474572001D99EF /* ZYGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20D11E474572001D99EF /* ZYGroup.swift */; };
+		DB9C20D41E4747C0001D99EF /* VerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20D31E4747C0001D99EF /* VerticalButton.swift */; };
+		DB9C20D91E474CB0001D99EF /* ClassifyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20D71E474CB0001D99EF /* ClassifyCollectionViewCell.swift */; };
+		DB9C20DA1E474CB0001D99EF /* ClassifyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB9C20D81E474CB0001D99EF /* ClassifyCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -146,6 +152,12 @@
 		DB9C20C61E46F122001D99EF /* TopHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopHeaderView.swift; sourceTree = "<group>"; };
 		DB9C20C71E46F122001D99EF /* TopHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopHeaderView.xib; sourceTree = "<group>"; };
 		DB9C20CB1E4734DB001D99EF /* ClassifyHeaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassifyHeaderViewController.swift; sourceTree = "<group>"; };
+		DB9C20CD1E473DE9001D99EF /* ClassifyButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassifyButtonView.swift; sourceTree = "<group>"; };
+		DB9C20CF1E473F5B001D99EF /* classify */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = classify; sourceTree = "<group>"; };
+		DB9C20D11E474572001D99EF /* ZYGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYGroup.swift; sourceTree = "<group>"; };
+		DB9C20D31E4747C0001D99EF /* VerticalButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalButton.swift; sourceTree = "<group>"; };
+		DB9C20D71E474CB0001D99EF /* ClassifyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassifyCollectionViewCell.swift; sourceTree = "<group>"; };
+		DB9C20D81E474CB0001D99EF /* ClassifyCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassifyCollectionViewCell.xib; sourceTree = "<group>"; };
 		F2C09C71EE3AB645CAFC0A0C /* Pods-StrayAnimals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StrayAnimals.release.xcconfig"; path = "Pods/Target Support Files/Pods-StrayAnimals/Pods-StrayAnimals.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -378,6 +390,7 @@
 				DB81B2E71D936D8B00EE7068 /* themes */,
 				DB81B2E31D936D7100EE7068 /* Details */,
 				DB81B2E41D936D7100EE7068 /* events */,
+				DB9C20CF1E473F5B001D99EF /* classify */,
 			);
 			name = CustomData;
 			sourceTree = "<group>";
@@ -441,8 +454,12 @@
 		DB9C20C21E46D6EF001D99EF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DB9C20CD1E473DE9001D99EF /* ClassifyButtonView.swift */,
 				DB9C20C61E46F122001D99EF /* TopHeaderView.swift */,
 				DB9C20C71E46F122001D99EF /* TopHeaderView.xib */,
+				DB9C20D31E4747C0001D99EF /* VerticalButton.swift */,
+				DB9C20D71E474CB0001D99EF /* ClassifyCollectionViewCell.swift */,
+				DB9C20D81E474CB0001D99EF /* ClassifyCollectionViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -451,6 +468,7 @@
 			isa = PBXGroup;
 			children = (
 				DB9C20C41E46D7CC001D99EF /* ZYCollection.swift */,
+				DB9C20D11E474572001D99EF /* ZYGroup.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -528,12 +546,14 @@
 				DB7D1A781DAB7DAB00A99D3B /* MapTableViewCell.xib in Resources */,
 				DB81B3171D990C1600EE7068 /* HomeDetailCollectionViewCell.xib in Resources */,
 				DB81B31D1D9A10ED00EE7068 /* DetailChoiceButtonView.xib in Resources */,
+				DB9C20DA1E474CB0001D99EF /* ClassifyCollectionViewCell.xib in Resources */,
 				DB81B3231D9AA9CD00EE7068 /* EventCellTableViewCell.xib in Resources */,
 				DB9C20C91E46F122001D99EF /* TopHeaderView.xib in Resources */,
 				DB81B2E81D936D8B00EE7068 /* themes in Resources */,
 				DB81B2E51D936D7100EE7068 /* Details in Resources */,
 				DB81B30F1D98EBA100EE7068 /* HomeDetailToolBar.xib in Resources */,
 				DB58630D1D8FD58500E17C9C /* Assets.xcassets in Resources */,
+				DB9C20D01E473F5B001D99EF /* classify in Resources */,
 				DB81B2D11D929C5300EE7068 /* CollectionViewCell.xib in Resources */,
 				DB81B3311D9CBD6200EE7068 /* ShopDetailContentView.xib in Resources */,
 			);
@@ -659,6 +679,7 @@
 				DB81B2EA1D9370BE00EE7068 /* UIBarButton.swift in Sources */,
 				DB0610BE1D92324500567BC2 /* UIColor.swift in Sources */,
 				DB81B3081D96638000EE7068 /* ThemeCell.swift in Sources */,
+				DB9C20D41E4747C0001D99EF /* VerticalButton.swift in Sources */,
 				DB81B2E11D936D0F00EE7068 /* SwiftDictModel.swift in Sources */,
 				DB81B3111D99090800EE7068 /* HomeDetailScrollView.swift in Sources */,
 				DB0610C51D92395300567BC2 /* ClassifyViewController.swift in Sources */,
@@ -670,10 +691,13 @@
 				DB0610B91D91372100567BC2 /* TabBarController.swift in Sources */,
 				DB81B2FA1D93A86500EE7068 /* UIImageVIew.swift in Sources */,
 				DB0610AB1D91283F00567BC2 /* Const.swift in Sources */,
+				DB9C20D91E474CB0001D99EF /* ClassifyCollectionViewCell.swift in Sources */,
+				DB9C20CE1E473DE9001D99EF /* ClassifyButtonView.swift in Sources */,
 				DB9C20C01E45E136001D99EF /* FileTool.swift in Sources */,
 				DB81B3221D9AA9CD00EE7068 /* EventCellTableViewCell.swift in Sources */,
 				DB81B30E1D98EBA100EE7068 /* HomeDetailToolBar.swift in Sources */,
 				DB81B2D01D929C5300EE7068 /* CollectionViewCell.swift in Sources */,
+				DB9C20D21E474572001D99EF /* ZYGroup.swift in Sources */,
 				DB81B2DF1D936CE000EE7068 /* EveryDays.swift in Sources */,
 				DB0610C11D92392F00567BC2 /* HomeViewController.swift in Sources */,
 				DB81B3301D9CBD6200EE7068 /* ShopDetailContentView.swift in Sources */,
