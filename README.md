@@ -34,7 +34,7 @@
 ****
 [引導畫面、選擇城市]
 
-<img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-06-2017%2012-16-47.gif" , height=500>	
+<img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-07-2017%2000-08-03.gif" , height=500>	
 * 從`AppDelegate.swift`啟動程序
 ```
 	 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -100,23 +100,23 @@ class MainTabBar : UITabBar {
 ****
 [首頁-探索下拉刷新、動物詳情、收容所詳情、撥打電話、分享]
 
-<img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-06-2017%2014-31-40.gif" , height=500>
+<img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-07-2017%2000-19-13.gif" , height=500>
 
 * 導航條上的探索和幫助是將navigationItem.titleView 設置為自定義的`DoubleTextView`來實現,內部封裝好功能,並且通過設置代理將點擊事件傳遞給控制器，在view的最底層添加一個scrollView，設置scorllView的contentSize為屏幕的寬度的2倍，在scrollView上添加倆個TableView，分別是探索的TableView和幫助的TabelView
 
 ****
 [首頁-打開地圖、導航、切換行人、汽車模式、路徑步驟]
 
-<img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-06-2017%2014-39-28.gif" , height=500>
+<img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-07-2017%2000-21-30.gif" , height=500>
 
 ****
 [首頁-幫助]
 
-<img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-06-2017%2014-41-10.gif" , height=500>
+<img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-07-2017%2000-23-13.gif" , height=500>
 
 ****
 [我的]
 
-<img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-06-2017%2014-46-06.gif" , height=500>
+<img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-07-2017%2000-24-48.gif" , height=500>
 
 * 清理內存這裡封裝了一個工具類:FileTool，通過類方法可以調用查看指定路徑文件夾的大小FileTool.folderSize(path: String)，以及異步刪除指路徑下的全部文件夾FileTool.cleanFolder(path: String, complete : () -> ()),complete為刪除完成後的回調
