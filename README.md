@@ -101,22 +101,216 @@ class MainTabBar : UITabBar {
 [首頁-探索下拉刷新、動物詳情、收容所詳情、撥打電話、分享]
 
 <img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-07-2017%2000-19-13.gif" , height=500>
+* 下拉刷新作法使用第三方套件`MJRefresh`
+```
+  ///MARK:- 下拉加載刷新數據
+        func pullLoadCollection() {
+            weak var tmpSelf = self
+            // 模擬延時加載
+            let time = dispatch_time(DISPATCH_TIME_NOW,Int64(1.0 * Double(NSEC_PER_SEC)))
+            SVProgressHUD.showWithStatus("正在加載...")
+            dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
+                 tmpSelf!.collectionView!.mj_header.endRefreshing()
+                 NetworkTool.shareNetworkTool.loadProductData { [weak self] (animals) in
+                    if animals.count == 0 {
+                        SVProgressHUD.showErrorWithStatus("數據加載失敗")
+                        tmpSelf!.collectionView!.mj_header.endRefreshing()
+                        return
+                    }
+                    self!.setupCollectionView()
+                    self!.animalsArray = animals
+                    self?.collectionView!.reloadData()
+                    tmpSelf!.collectionView!.mj_header.endRefreshing()
+                }
+            }
+        }
+```
+* 導航條上的探索和幫助是將navigationItem.titleView 設置為自定義的`DoubleTextView`來實現，內部封裝好功能，並且通過設置代理將點擊事件傳遞給控制器，在view的最底層添加一個scrollView，設置scorllView的contentSize為屏幕的寬度的2倍，在scrollView上添加倆個TableView，分別是探索的TableView和幫助的TabelView
+```
+class DoubleTextView: UIView {
 
-* 導航條上的探索和幫助是將navigationItem.titleView 設置為自定義的`DoubleTextView`來實現,內部封裝好功能,並且通過設置代理將點擊事件傳遞給控制器，在view的最底層添加一個scrollView，設置scorllView的contentSize為屏幕的寬度的2倍，在scrollView上添加倆個TableView，分別是探索的TableView和幫助的TabelView
+    private let leftTextButton: NoHighlightButton =  NoHighlightButton()
+    private let rightTextButton: NoHighlightButton = NoHighlightButton()
+    private let textColorFroNormal: UIColor = UIColor(red: 100 / 255.0, green: 100 / 255.0, blue: 100 / 255.0, alpha: 1)
+    private let textFont: UIFont = theme.NavTitleFont
+    private let bottomLineView: UIView = UIView()
+    private var selectedBtn: UIButton?
+    weak var delegate: DoubleTextViewDelegate?
+    
+    convenience init(leftText: String, rigthText: String) {
+        self.init()
+        // 設置左邊文字
+        setButton(leftTextButton, title: leftText, tag: 100)
+        // 設置右邊文字
+        setButton(rightTextButton, title: rigthText, tag: 101)
+        // 設置底部線條View
+        setBottomLineView()
+        titleButtonClick(leftTextButton)
+    }
+    private func setBottomLineView() {
+        bottomLineView.backgroundColor = UIColor(red: 60 / 255.0, green: 60 / 255.0, blue: 60 / 255.0, alpha: 1)
+        addSubview(bottomLineView)
+    }
+    private func setButton(button: UIButton, title: String, tag: Int) {
+        button.setTitleColor(UIColor.blackColor(), forState: .Selected)
+        button.setTitleColor(textColorFroNormal, forState: .Normal)
+        button.titleLabel?.font = textFont
+        button.tag = tag
+        button.addTarget(self, action: #selector(DoubleTextView.titleButtonClick(_:)), forControlEvents: .TouchUpInside)
+        button.setTitle(title, forState: .Normal)
+        addSubview(button)
+    }
+       override func layoutSubviews() {
+        super.layoutSubviews()
+        let btnW = width * 0.5
+        leftTextButton.frame = CGRectMake(0, 0, btnW, height)
+        rightTextButton.frame = CGRectMake(btnW, 0, btnW, height)
+        bottomLineView.frame = CGRectMake(0, height - 2, btnW, 2)
+    }
+    func titleButtonClick(sender: UIButton) {
+        selectedBtn?.selected = false
+        sender.selected = true
+        selectedBtn = sender
+        bottomViewScrollTo(sender.tag - 100)
+        delegate?.doubleTextView(self, didClickBtn: sender, forIndex: sender.tag - 100)
+    }    
+    func bottomViewScrollTo(index: Int) {
+        UIView.animateWithDuration(0.2, animations: { () -> Void in
+            self.bottomLineView.frame.origin.x = CGFloat(index) * self.bottomLineView.width
+        })
+    }    
+    func clickBtnToIndex(index: Int) {
+        let btn: NoHighlightButton = self.viewWithTag(index + 100) as! NoHighlightButton
+        self.titleButtonClick(btn)
+    }
+}
+
+ ```
+* 再來是介紹一下網路處理`NetworkTool`
+```
+import Foundation
+import SVProgressHUD
+import Alamofire
+import SwiftyJSON
+
+class NetworkTool: NSObject {
+    ///單例
+    static let shareNetworkTool = NetworkTool()   
+    ///讀取公開資料
+    func loadProductData(finished:(animals: [Animals]) -> ()) {
+        SVProgressHUD.showWithStatus("正在加載...")
+        let url = "http://data.coa.gov.tw/Service/OpenData/AnimalOpenData.aspx"
+        Alamofire.request(.GET, url).responseJSON { (response) in
+                guard response.result.isSuccess else {
+                    SVProgressHUD.showErrorWithStatus("加載失敗...")
+                    return
+                }
+                if let value = response.result.value {
+                    let dict = JSON(value)
+                        if let items = dict.arrayObject {
+                            var animalArray = [Animals]()
+                            for item in items {
+                                    let oneAnimal = Animals(dict: item as! [String: AnyObject])
+                                    animalArray.append(oneAnimal)
+                                SVProgressHUD.dismiss()
+                            }
+                            finished(animals: animalArray)
+                        }
+                }
+        }
+    }
+}
+```
 
 ****
 [首頁-打開地圖、導航、切換行人、汽車模式、路徑步驟]
 
 <img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-07-2017%2000-21-30.gif" , height=500>
+* 地圖方面在`MapViewController`使用MapKit框架，地圖的處理在下面
+```
+ func mapProcess() {
+        let geocoder = CLGeocoder()
+        //判斷是否提供地址
+        if map != "" {
+            //利用Geocoder將地址轉換成座標
+            geocoder.geocodeAddressString(map, completionHandler: { placemarks, error in
+                if error != nil {
+                    print(error)
+                    return
+                }
+                //取得地標
+                if let placemarks = placemarks {
+                    let placemark = placemarks[0]
+                    self.currentPlacemark = placemark
+                    //地圖上註解
+                    let annotation = MKPointAnnotation()
+                    annotation.title = self.name
+                    annotation.subtitle = "電話：" + self.tel
+                    
+                    if let location = placemark.location {
+                       annotation.coordinate = location.coordinate
+                        
+                        self.mapView.showAnnotations([annotation], animated: true)
+                        self.mapView.selectAnnotation(annotation, animated: true)
+                    }
+                }
+                })
+        }else{
+            let noData = UIAlertController(title: "抱歉", message: "本資料尚未提供完全，無法搜尋地點，請嘗試返回，觀看備註是否提供完整聯絡資訊，謝謝！", preferredStyle: .Alert)
+            noData.addAction(UIAlertAction(title: "確認", style: .Default, handler: nil))
+            self.presentViewController(noData, animated: true, completion: nil)
+        }
+        
+    }
 
+```
 ****
 [首頁-幫助]
 
 <img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-07-2017%2000-23-13.gif" , height=500>
 
+* 幫助的話設置tableView製作，內容主要都是webView
+```
+ ///幫助tableView
+    private func setalbumTableView() {
+        albumTableView = MainTableView(frame: CGRectMake(ScreenWidth, 0, ScreenWidth, backgroundScrollView.height), style: .Plain, dataSource: self, delegate: self)
+        backgroundScrollView.addSubview(albumTableView)
+        setTableViewHeader(self, refreshingAction: #selector(HomeViewController.pullLoadAlbumData), imageFrame: CGRectMake((ScreenWidth - SD_RefreshImage_Width) * 0.5, 10, SD_RefreshImage_Width, SD_RefreshImage_Height), tableView: albumTableView)
+    }
+```
 ****
 [我的]
 
 <img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-07-2017%2000-24-48.gif" , height=500>
 
 * 清理內存這裡封裝了一個工具類:FileTool，通過類方法可以調用查看指定路徑文件夾的大小FileTool.folderSize(path: String)，以及異步刪除指路徑下的全部文件夾FileTool.cleanFolder(path: String, complete : () -> ()),complete為刪除完成後的回調
+```
+ /// 徹底清除文件夾
+    class func cleanFolder(path: String, complete:() -> ()) {
+        SVProgressHUD.showWithStatus("正在清理內存", maskType: SVProgressHUDMaskType.Clear)
+        let queue = dispatch_queue_create("cleanQueue", nil)
+        
+        dispatch_async(queue) { () -> Void in
+            let chilerFiles = self.fileManager.subpathsAtPath(path)
+            for fileName in chilerFiles! {
+                let tmpPath = path as NSString
+                let fileFullPathName = tmpPath.stringByAppendingPathComponent(fileName)
+                if self.fileManager.fileExistsAtPath(fileFullPathName) {
+                    do {
+                        try self.fileManager.removeItemAtPath(fileFullPathName)
+                    } catch _ {
+                    }
+                }
+            }
+            // 線程睡1秒 測試,實際用到是將下面代碼刪除即可
+            NSThread.sleepForTimeInterval(1.0)
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                SVProgressHUD.dismiss()
+                complete()
+            })
+        }
+    }
+```
+###再來還有兩項功能未實作，分別是最愛及分類
+```
+```
