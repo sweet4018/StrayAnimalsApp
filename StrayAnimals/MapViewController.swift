@@ -65,8 +65,6 @@ class MapViewController: UIViewController , MKMapViewDelegate{
         let mapView = MKMapView()
         mapView.frame = MainBounds
         mapView.delegate = self
-//        mapView.showsCompass = false
-//        mapView.showsScale = false
         mapView.showsUserLocation = true
         return mapView
     }()

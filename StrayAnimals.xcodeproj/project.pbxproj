@@ -314,6 +314,7 @@
 				DB0610C01D92392F00567BC2 /* HomeViewController.swift */,
 				DB81B2D41D92AA4B00EE7068 /* HomeDetailViewController.swift */,
 				DB5F45E31DA5F39D00D8E32B /* HelpDetailViewController.swift */,
+				DB7D1A661DA920F500A99D3B /* MapViewController.swift */,
 				DB81B2D61D92D6E100EE7068 /* DoubleTextView.swift */,
 			);
 			name = Controller;
@@ -339,7 +340,6 @@
 				DB0873C71D9E0CBB00972FFD /* AnimalViewCell.xib */,
 				DB81B32E1D9CBD6200EE7068 /* ShopDetailContentView.swift */,
 				DB81B32F1D9CBD6200EE7068 /* ShopDetailContentView.xib */,
-				DB7D1A661DA920F500A99D3B /* MapViewController.swift */,
 				DB7D1A751DAB7DAB00A99D3B /* MapTableViewCell.swift */,
 				DB7D1A761DAB7DAB00A99D3B /* MapTableViewCell.xib */,
 			);

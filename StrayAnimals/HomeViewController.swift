@@ -23,7 +23,6 @@ class HomeViewController: MainCityViewController , DoubleTextViewDelegate {
     private var backgroundScrollView: UIScrollView!
     private var doubleTextView: DoubleTextView!
     private var albumTableView: MainTableView!
-    private var dayTableView: MainTableView!
     private var themes: ThemeModels?
     
     override func viewDidLoad() {
@@ -37,9 +36,9 @@ class HomeViewController: MainCityViewController , DoubleTextViewDelegate {
         setNav()
         //設置scrollView
         setScrollView()
-        //設置動物collectionView
+        //設置探索動物collectionView
         setupCollectionView()
-        //初始化相關tableView
+        //設置幫助tableView
         setalbumTableView()
         //下拉加載刷新
         collectionView?.mj_header.beginRefreshing()
@@ -86,7 +85,7 @@ class HomeViewController: MainCityViewController , DoubleTextViewDelegate {
         navigationItem.titleView = doubleTextView
     }
     
-    ///相關tableView
+    ///幫助tableView
     private func setalbumTableView() {
         albumTableView = MainTableView(frame: CGRectMake(ScreenWidth, 0, ScreenWidth, backgroundScrollView.height), style: .Plain, dataSource: self, delegate: self)
         backgroundScrollView.addSubview(albumTableView)

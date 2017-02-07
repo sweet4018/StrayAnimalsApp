@@ -26,7 +26,6 @@ class DoubleTextView: UIView {
         setButton(rightTextButton, title: rigthText, tag: 101)
         // 設置底部線條View
         setBottomLineView()
-        
         titleButtonClick(leftTextButton)
     }
     private func setBottomLineView() {
@@ -45,7 +44,6 @@ class DoubleTextView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
         let btnW = width * 0.5
         leftTextButton.frame = CGRectMake(0, 0, btnW, height)
         rightTextButton.frame = CGRectMake(btnW, 0, btnW, height)
