@@ -24,7 +24,6 @@ class HomeViewController: MainCityViewController , DoubleTextViewDelegate {
     private var doubleTextView: DoubleTextView!
     private var albumTableView: MainTableView!
     private var themes: ThemeModels?
-    private var nowCity: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,37 +42,8 @@ class HomeViewController: MainCityViewController , DoubleTextViewDelegate {
         setalbumTableView()
         //下拉加載刷新
         collectionView?.mj_header.beginRefreshing()
-        
-        //城市選擇監聽
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HomeViewController.refreshViewWithCityChange(_:)), name: SD_CurrentCityChange_Notification, object: nil)
     }
-    
-    // MARK: - 城市刷新
-    func refreshViewWithCityChange(noti: NSNotification) {
-        
-        self.nowCity = noti.object as? String
-        
-        weak var tmpSelf = self
-        // 模擬延時加載
-        let time = dispatch_time(DISPATCH_TIME_NOW,Int64(1.0 * Double(NSEC_PER_SEC)))
-        SVProgressHUD.showWithStatus("正在加載...")
-        dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
-            tmpSelf!.collectionView!.mj_header.endRefreshing()
-            NetworkTool.shareNetworkTool.loadNeedData((noti.object as? String)!, finished:{ [weak self] (animals) in
-                if animals.count == 0 {
-                    SVProgressHUD.showErrorWithStatus("數據加載失敗")
-                    tmpSelf!.collectionView!.mj_header.endRefreshing()
-                    return
-                }
-                self!.setupCollectionView()
-                self!.animalsArray = animals
-                self?.collectionView!.reloadData()
-                tmpSelf!.collectionView!.mj_header.endRefreshing()
-            })
-        }
-        
-    }
-    
+ 
     /// 設置collectionView
     private func setupCollectionView() {
         let collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UICollectionViewFlowLayout())
@@ -128,32 +98,12 @@ class HomeViewController: MainCityViewController , DoubleTextViewDelegate {
         tableView.mj_header = header
     }
     
-    ///MARK:- 下拉加載刷新數據
-    func pullLoadCollection() {
-        
-        weak var tmpSelf = self
-        // 模擬延時加載
-        let time = dispatch_time(DISPATCH_TIME_NOW,Int64(1.0 * Double(NSEC_PER_SEC)))
-        SVProgressHUD.showWithStatus("正在加載...")
-
-        if self.nowCity != nil  {
-            dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
-                tmpSelf!.collectionView!.mj_header.endRefreshing()
-                NetworkTool.shareNetworkTool.loadNeedData((self.nowCity)!, finished:{ [weak self] (animals) in
-                    if animals.count == 0 {
-                        SVProgressHUD.showErrorWithStatus("數據加載失敗")
-                        tmpSelf!.collectionView!.mj_header.endRefreshing()
-                        return
-                    }
-                    self!.setupCollectionView()
-                    self!.animalsArray = animals
-                    self?.collectionView!.reloadData()
-                    tmpSelf!.collectionView!.mj_header.endRefreshing()
-                    })
-            }
-            
-        }else {
-            
+        ///MARK:- 下拉加載刷新數據
+        func pullLoadCollection() {
+            weak var tmpSelf = self
+            // 模擬延時加載
+            let time = dispatch_time(DISPATCH_TIME_NOW,Int64(1.0 * Double(NSEC_PER_SEC)))
+            SVProgressHUD.showWithStatus("正在加載...")
             dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
                  tmpSelf!.collectionView!.mj_header.endRefreshing()
                  NetworkTool.shareNetworkTool.loadProductData { [weak self] (animals) in
@@ -169,7 +119,6 @@ class HomeViewController: MainCityViewController , DoubleTextViewDelegate {
                 }
             }
         }
-    }
     
     func pullLoadAlbumData() {
         weak var tmpSelf = self

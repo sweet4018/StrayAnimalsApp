@@ -20,10 +20,6 @@
 		DB0610C91D925B3600567BC2 /* MainCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0610C81D925B3600567BC2 /* MainCityViewController.swift */; };
 		DB0873C81D9E0CBB00972FFD /* AnimalViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0873C61D9E0CBB00972FFD /* AnimalViewCell.swift */; };
 		DB0873C91D9E0CBB00972FFD /* AnimalViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB0873C71D9E0CBB00972FFD /* AnimalViewCell.xib */; };
-		DB14379F1F81378800793793 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB14379D1F81378800793793 /* Model.xcdatamodeld */; };
-		DB1437A21F81386F00793793 /* Animal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1437A01F81386F00793793 /* Animal+CoreDataProperties.swift */; };
-		DB1437A31F81386F00793793 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1437A11F81386F00793793 /* Animal.swift */; };
-		DB1437A61F813A4900793793 /* CoreDataConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1437A51F813A4900793793 /* CoreDataConnect.swift */; };
 		DB5863061D8FD58500E17C9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5863051D8FD58500E17C9C /* AppDelegate.swift */; };
 		DB58630D1D8FD58500E17C9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB58630C1D8FD58500E17C9C /* Assets.xcassets */; };
 		DB5863101D8FD58500E17C9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB58630E1D8FD58500E17C9C /* LaunchScreen.storyboard */; };
@@ -75,7 +71,6 @@
 /* Begin PBXFileReference section */
 		012A372D1D5A93C1C8A6A6A9 /* Pods-StrayAnimals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StrayAnimals.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StrayAnimals/Pods-StrayAnimals.debug.xcconfig"; sourceTree = "<group>"; };
 		44E24E600B63EEBA8934A468 /* Pods_StrayAnimals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StrayAnimals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB05900D1F812BF90098A097 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		DB0610AA1D91283F00567BC2 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		DB0610AC1D912A6700567BC2 /* NewfeatureCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewfeatureCollectionViewController.swift; sourceTree = "<group>"; };
 		DB0610B81D91372100567BC2 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -88,10 +83,6 @@
 		DB0610C81D925B3600567BC2 /* MainCityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCityViewController.swift; sourceTree = "<group>"; };
 		DB0873C61D9E0CBB00972FFD /* AnimalViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalViewCell.swift; sourceTree = "<group>"; };
 		DB0873C71D9E0CBB00972FFD /* AnimalViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnimalViewCell.xib; sourceTree = "<group>"; };
-		DB14379E1F81378800793793 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		DB1437A01F81386F00793793 /* Animal+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Animal+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		DB1437A11F81386F00793793 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
-		DB1437A51F813A4900793793 /* CoreDataConnect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataConnect.swift; sourceTree = "<group>"; };
 		DB5863021D8FD58500E17C9C /* StrayAnimals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StrayAnimals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB5863051D8FD58500E17C9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB58630C1D8FD58500E17C9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -169,7 +160,6 @@
 		34860CDEA83F0C059BCAA903 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DB05900D1F812BF90098A097 /* libsqlite3.tbd */,
 				DB7D1A681DA929D000A99D3B /* MapKit.framework */,
 				44E24E600B63EEBA8934A468 /* Pods_StrayAnimals.framework */,
 			);
@@ -201,7 +191,6 @@
 		DB0610A51D90E15C00567BC2 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				DB1437A41F813A1C00793793 /* CoreData */,
 				DB0610BC1D92320300567BC2 /* Extension */,
 				DB0610B71D9136EC00567BC2 /* Controller */,
 				DB0610A91D9127F300567BC2 /* Tools */,
@@ -289,14 +278,6 @@
 			name = Classify;
 			sourceTree = "<group>";
 		};
-		DB1437A41F813A1C00793793 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				DB1437A51F813A4900793793 /* CoreDataConnect.swift */,
-			);
-			name = CoreData;
-			sourceTree = "<group>";
-		};
 		DB5862F91D8FD58500E17C9C = {
 			isa = PBXGroup;
 			children = (
@@ -322,7 +303,6 @@
 				DB0610A41D90DF3A00567BC2 /* Supporting Files */,
 				DB0610A21D90DED700567BC2 /* Classes */,
 				DB5863051D8FD58500E17C9C /* AppDelegate.swift */,
-				DB14379D1F81378800793793 /* Model.xcdatamodeld */,
 				DB81B2FD1D965A4300EE7068 /* StrayAnimals-Bridging-Header.h */,
 			);
 			path = StrayAnimals;
@@ -388,8 +368,6 @@
 		DB81B3251D9AAA0A00EE7068 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DB1437A01F81386F00793793 /* Animal+CoreDataProperties.swift */,
-				DB1437A11F81386F00793793 /* Animal.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -650,7 +628,6 @@
 				DB81B2CD1D92961000EE7068 /* NetworkTool.swift in Sources */,
 				DB81B2D51D92AA4B00EE7068 /* HomeDetailViewController.swift in Sources */,
 				DB0610C91D925B3600567BC2 /* MainCityViewController.swift in Sources */,
-				DB1437A61F813A4900793793 /* CoreDataConnect.swift in Sources */,
 				DB81B2EE1D937E3000EE7068 /* CityCollectionViewCell.swift in Sources */,
 				DB81B2EA1D9370BE00EE7068 /* UIBarButton.swift in Sources */,
 				DB0610BE1D92324500567BC2 /* UIColor.swift in Sources */,
@@ -660,11 +637,9 @@
 				DB0610C51D92395300567BC2 /* ClassifyViewController.swift in Sources */,
 				DB81B2D31D929D4200EE7068 /* SearchResult.swift in Sources */,
 				DB5F45E41DA5F39D00D8E32B /* HelpDetailViewController.swift in Sources */,
-				DB1437A31F81386F00793793 /* Animal.swift in Sources */,
 				DB5863061D8FD58500E17C9C /* AppDelegate.swift in Sources */,
 				DB81B3131D990A8800EE7068 /* HomeDetailTopView.swift in Sources */,
 				DB81B2F21D937FF600EE7068 /* RefreshHeader.swift in Sources */,
-				DB1437A21F81386F00793793 /* Animal+CoreDataProperties.swift in Sources */,
 				DB0610B91D91372100567BC2 /* TabBarController.swift in Sources */,
 				DB81B2FA1D93A86500EE7068 /* UIImageVIew.swift in Sources */,
 				DB0610AB1D91283F00567BC2 /* Const.swift in Sources */,
@@ -672,7 +647,6 @@
 				DB81B30E1D98EBA100EE7068 /* HomeDetailToolBar.swift in Sources */,
 				DB81B2D01D929C5300EE7068 /* CollectionViewCell.swift in Sources */,
 				DB81B2DF1D936CE000EE7068 /* EveryDays.swift in Sources */,
-				DB14379F1F81378800793793 /* Model.xcdatamodeld in Sources */,
 				DB0610C11D92392F00567BC2 /* HomeViewController.swift in Sources */,
 				DB81B3301D9CBD6200EE7068 /* ShopDetailContentView.swift in Sources */,
 				DB7D1A671DA920F500A99D3B /* MapViewController.swift in Sources */,
@@ -841,19 +815,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		DB14379D1F81378800793793 /* Model.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				DB14379E1F81378800793793 /* Model.xcdatamodel */,
-			);
-			currentVersion = DB14379E1F81378800793793 /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = DB5862FA1D8FD58500E17C9C /* Project object */;
 }

@@ -77,12 +77,6 @@ class HomeDetailViewController: BaseViewController , HomeDetailToolBarDelegate{
         menu.addAction(doneAction)
         self.presentViewController(menu, animated: true, completion: nil)
     }
-    
-    func toolBarDidClickedAddToMyFavorite() {
-        
-    }
-    
-    
   }
 
 extension HomeDetailViewController : UIScrollViewDelegate{

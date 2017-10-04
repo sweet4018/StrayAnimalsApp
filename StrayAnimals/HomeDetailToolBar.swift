@@ -9,11 +9,7 @@
 import UIKit
 
 protocol HomeDetailToolBarDelegate: NSObjectProtocol {
-    
     func toolBarDidClickedTMALLButton()
-    
-    //MAKR: 加入我的最愛
-    func toolBarDidClickedAddToMyFavorite()
 }
 
 
@@ -36,7 +32,6 @@ class HomeDetailToolBar: UIView {
     
     @IBAction func likeButtonClick(sender: UIButton) {
         sender.selected = !sender.selected
-        delegate!.toolBarDidClickedAddToMyFavorite()
     }
     
 

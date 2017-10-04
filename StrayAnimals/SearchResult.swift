@@ -25,7 +25,6 @@ class SearchResult: NSObject {
     var bacterin : String?
     var remark : String?
     var update : String?
-    var area: String?
     
     init(dict:[String:AnyObject]){
         super.init()
@@ -44,7 +43,6 @@ class SearchResult: NSObject {
         bacterin = dict ["animal_bacterin"] as? String
         remark = dict ["animal_remark"] as? String
         update = dict ["animal_update"] as? String
-        area = dict["animal_area_pkid"] as? String
     }
 
     

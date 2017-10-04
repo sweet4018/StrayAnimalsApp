@@ -23,7 +23,7 @@ class MainCityViewController: UIViewController {
         SVProgressHUD.setBackgroundColor(UIColor(red: 0, green: 0, blue: 0, alpha: 0.5))
         SVProgressHUD.setForegroundColor(UIColor.whiteColor())
         //城市選擇
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MainCityViewController.cityChange(_:)), name: SD_CurrentCityChange_Notification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "cityChange:", name: SD_CurrentCityChange_Notification, object: nil)
         cityRightBtn = TextImageButton(frame: CGRectMake(0, 20, 80, 44))
         let user = NSUserDefaults.standardUserDefaults()
         if let currentCity = user.objectForKey(SD_Current_SelectedCity) as? String {
@@ -34,7 +34,7 @@ class MainCityViewController: UIViewController {
         cityRightBtn.titleLabel?.font = theme.NavItemFont
         cityRightBtn.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
         cityRightBtn.setImage(UIImage(named: "home_down"), forState: .Normal)
-        cityRightBtn.addTarget(self, action: #selector(MainCityViewController.pushcityView), forControlEvents: .TouchUpInside)
+        cityRightBtn.addTarget(self, action: "pushcityView", forControlEvents: .TouchUpInside)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: cityRightBtn)
     }
      func pushcityView () {
