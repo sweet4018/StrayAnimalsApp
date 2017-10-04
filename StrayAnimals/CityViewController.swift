@@ -18,11 +18,11 @@ class CityViewController: UIViewController {
     var layout = UICollectionViewFlowLayout()
     
     lazy var domesticCitys: NSMutableArray? = {
-        let arr = NSMutableArray(array: ["全部","臺北", "桃園", "新竹", "苗栗", "臺中", "彰化", "雲林", "嘉義", "臺南","高雄","屏東","臺東","花蓮","宜蘭"])
+        let arr = NSMutableArray(array: ["全部","臺北市","新北市","基隆市","宜蘭縣", "桃園縣","新竹縣", "新竹市", "苗栗縣", "臺中市","彰化縣","南投縣","雲林縣", "嘉義市", "嘉義縣", "臺南市","高雄市","屏東縣","花蓮縣","臺東縣"])
         return arr
     }()
     lazy var overseasCitys: NSMutableArray? = {
-        let arr = NSMutableArray(array: ["馬祖", "澎湖", "金門", "綠島", "小琉球", "蘭嶼"])
+        let arr = NSMutableArray(array: ["澎湖縣", "金門縣", "連江縣"])
         return arr
     }()
     
@@ -39,13 +39,13 @@ class CityViewController: UIViewController {
     
     private func selectedCurrentCity() -> NSIndexPath {
         if let currentCityName = self.cityName {
-            for var i = 0; i < domesticCitys!.count; i++ {
+            for i in 0 ..< domesticCitys!.count {
                 if currentCityName == domesticCitys![i] as! String {
                     return NSIndexPath(forItem: i, inSection: 0)
                 }
             }
             
-            for var i = 0; i < overseasCitys!.count; i++ {
+            for i in 0 ..< overseasCitys!.count {
                 if currentCityName == overseasCitys![i] as! String {
                     return NSIndexPath(forItem: i, inSection: 1)
                 }
@@ -57,7 +57,7 @@ class CityViewController: UIViewController {
     func setNav() {
         view.backgroundColor = theme.BackgroundColor
         navigationItem.title = "選擇城市"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "取消", style: .Done, target: self, action: "cancle")
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "取消", style: .Done, target: self, action: #selector(CityViewController.cancle))
     }
     
     func setCollectionView() {
