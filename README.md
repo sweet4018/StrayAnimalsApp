@@ -1,7 +1,9 @@
 # StrayAnimalsApp
 流浪動物app
 
-- 使用swift2.3,Xcode7.3.1製作
+- Swift2.3
+- Xcode7.3.1
+- iOS 8
 ---
 ### 第三方套件說明：
 * Kingfisher：下載和從Web緩存圖像
