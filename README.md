@@ -285,10 +285,62 @@ class NetworkTool: NSObject {
 ****
 [我的最愛]
 
-!["DemoVideo"] (https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/12月-21-2017%2022-56-40.gif)
+!["DemoVideo"](https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/12月-21-2017%2022-56-40.gif)
 
-* 儲存資料庫的機制是使用```CoreData```
+* 儲存資料庫的機制是使用```CoreData```，來一段新增資料
+```
+func insert(entityName: String ,attributeInfo: [String:String],imageData: NSData?) -> Bool {
+        
+        //先刪除此資料，避免資料重複
+        let key: String = attributeInfo["id"]!
+        let predicate = NSPredicate(format: "name == %@",key)
+        let deleteResult = delete(coreDataEntityAnimal, predicate: predicate)
+        print("刪除結果:\(deleteResult)")
+        
+        let insetData = NSEntityDescription.insertNewObjectForEntityForName("Animal", inManagedObjectContext: self.managedObjectContext) as! MyType
+        
+        for (key,value) in attributeInfo {
+            
+            let t = insetData.entity.attributesByName[key]?.attributeType
+            
+            if t == .Integer16AttributeType  || t == .Integer32AttributeType || t == .Integer64AttributeType {
+                
+                insetData.setValue(Int(value),forKey: key)
+                
+            } else if t == .DoubleAttributeType || t == .FloatAttributeType {
+                
+                insetData.setValue(Double(value),forKey: key)
+                
+            } else if t == .BooleanAttributeType {
+                
+                insetData.setValue((value == "true" ? true : false),forKey: key)
+            }
+            else {
+                
+                insetData.setValue(value, forKey: key)
+            }
+        }
+        
+        //圖片處理
+        if let animalImage = imageData {
+            
+            insetData.image = animalImage
+        }
+        
+        do {
+            
+            try managedObjectContext.save()
+            
+            return true
+            
+        }catch {
+            
+            fatalError("\(error)")        
+        }
 
+        return false
+    }
+```
 ****
 [我的]
 
