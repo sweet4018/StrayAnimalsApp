@@ -347,7 +347,29 @@ func insert(entityName: String ,attributeInfo: [String:String],imageData: NSData
 !["DemoVideo"](https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/12月-21-2017%2022-57-25.gif)
 
 * 使用 ```UIPickerView``` 製作，供使用者選擇條件，在搜尋
-
+```
+    //MARK: 設置View、Label
+    private func setupView(title: String, tag: Int) -> UIView {
+        
+        let tagCGFloat = CGFloat(tag)
+        let view = UIView()
+        view.y = (tagCGFloat*150) + (tagCGFloat*20)
+        view.width = ScreenWidth
+        view.height = 150
+        view.backgroundColor = ZYWhileColor()
+        
+        let titleLabel = setupLabel(title)
+        view.addSubview(titleLabel)
+        
+        let pickerView = UIPickerView(frame: CGRect(x: 0, y: view.bounds.minY+20, width: ScreenWidth, height: 130))
+        pickerView.tag = 100+tag
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        view.addSubview(pickerView)
+        
+        return view
+    }
+```
 ****
 [我的]
 
