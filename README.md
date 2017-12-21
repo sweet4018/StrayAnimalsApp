@@ -1,7 +1,9 @@
 # StrayAnimalsApp
 流浪動物app
 
-- 使用swift2.3,Xcode7.3.1製作
+- Swift2.3
+- Xcode7.3.1
+- iOS 8
 ---
 ### 第三方套件說明：
 * Kingfisher：下載和從Web緩存圖像
@@ -34,7 +36,8 @@
 ****
 [引導畫面、選擇城市]
 
-<img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-07-2017%2000-08-03.gif" , height=500>	
+!["DemoVideo"](https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-07-2017%2000-08-03.gif)
+
 * 從`AppDelegate.swift`啟動程序
 ```
 	 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -100,7 +103,7 @@ class MainTabBar : UITabBar {
 ****
 [首頁-探索下拉刷新、動物詳情、收容所詳情、撥打電話、分享]
 
-<img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-07-2017%2000-19-13.gif" , height=500>
+!["DemoVideo"](https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-07-2017%2000-19-13.gif)
 * 下拉刷新作法使用第三方套件`MJRefresh`
 ```
   ///MARK:- 下拉加載刷新數據
@@ -225,7 +228,8 @@ class NetworkTool: NSObject {
 ****
 [首頁-打開地圖、導航、切換行人、汽車模式、路徑步驟]
 
-<img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-07-2017%2000-21-30.gif" , height=500>
+!["DemoVideo"](https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-07-2017%2000-21-30.gif)
+
 * 地圖方面在`MapViewController`使用MapKit框架，地圖的處理在下面
 ```
  func mapProcess() {
@@ -267,7 +271,7 @@ class NetworkTool: NSObject {
 ****
 [首頁-幫助]
 
-<img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-07-2017%2000-23-13.gif" , height=500>
+!["DemoVideo"](https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-07-2017%2000-23-13.gif)
 
 * 幫助的話設置tableView製作，內容主要都是webView
 ```
@@ -281,7 +285,9 @@ class NetworkTool: NSObject {
 ****
 [我的]
 
-<img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-07-2017%2000-24-48.gif" , height=500>
+
+!["DemoVideo"](https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-07-2017%2000-24-48.gif)
+
 
 * 清理內存這裡封裝了一個工具類:FileTool，通過類方法可以調用查看指定路徑文件夾的大小FileTool.folderSize(path: String)，以及異步刪除指路徑下的全部文件夾FileTool.cleanFolder(path: String, complete : () -> ()),complete為刪除完成後的回調
 ```
@@ -302,8 +308,6 @@ class NetworkTool: NSObject {
                     }
                 }
             }
-            // 線程睡1秒 測試,實際用到是將下面代碼刪除即可
-            NSThread.sleepForTimeInterval(1.0)
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 SVProgressHUD.dismiss()
                 complete()
@@ -311,5 +315,4 @@ class NetworkTool: NSObject {
         }
     }
 ```
-##結語：
-再來還有主要兩項功能未實作，分別是`最愛`和`分類`以及`選擇城市`功能，因前陣子在當兵，現在開始會繼續實作更新。
+
