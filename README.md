@@ -308,8 +308,6 @@ class NetworkTool: NSObject {
                     }
                 }
             }
-            // 線程睡1秒 測試,實際用到是將下面代碼刪除即可
-            NSThread.sleepForTimeInterval(1.0)
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 SVProgressHUD.dismiss()
                 complete()
