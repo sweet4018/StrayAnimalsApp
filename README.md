@@ -342,6 +342,13 @@ func insert(entityName: String ,attributeInfo: [String:String],imageData: NSData
     }
 ```
 ****
+[分類]
+
+!["DemoVideo"](https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/12月-21-2017%2022-57-25.gif)
+
+* 使用 ```UIPickerView``` 製作，供使用者選擇條件，在搜尋
+
+****
 [我的]
 
 !["DemoVideo"](https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-07-2017%2000-24-48.gif)
