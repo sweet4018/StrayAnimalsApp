@@ -54,61 +54,9 @@ class ClassifyMainView: UIView , UIPickerViewDelegate, UIPickerViewDataSource {
             addSubview(bodyTypeView)
         }
         
-         /*
-        //設置性別視窗
-        let genderView = setupView()
-        genderView.y = CGRectGetMaxY(bodyTypeView.frame) + kMargin
-        addSubview(genderView)
-        
-        let genderLb = setupLabel("性別")
-        genderView.addSubview(genderLb)
-        
-        for index in 0..<genders.count {
-            let group = genders[index]
-            let button = setupButton(index, group: group)
-            genderView.addSubview(button)
-            if index == genders.count - 1 {
-                genderView.height = CGRectGetMaxY(button.frame) + kMargin
-            }
-        }
-        
-        //設置類型視窗
-        let kindView = setupView()
-        kindView.y = CGRectGetMaxY(genderView.frame) + kMargin
-        addSubview(kindView)
-        
-        let kindLb = setupLabel("類型")
-        kindView.addSubview(kindLb)
-        
-        for index in 0..<kinds.count {
-            let group = kinds[index]
-            let button = setupButton(index, group: group)
-            kindView.addSubview(button)
-            if index == kinds.count - 1 {
-                kindView.height = CGRectGetMaxY(button.frame) + kMargin
-            }
-        }
-        
-        //設置年紀視窗
-        let ageView = setupView()
-        ageView.y = CGRectGetMaxY(kindView.frame) + kMargin
-        addSubview(ageView)
-        
-        let ageLb = setupLabel("年紀")
-        ageView.addSubview(ageLb)
-        
-        for index in 0..<ages.count {
-            let group = ages[index]
-            let button = setupButton(index, group: group)
-            ageView.addSubview(button)
-            if index == ages.count - 1 {
-                ageView.height = CGRectGetMaxY(button.frame) + kMargin
-            }
-        }
- */
     }
     
-    //MARK: 設置View、Label、Button
+    //MARK: 設置View、Label
     private func setupView(title: String, tag: Int) -> UIView {
         
         let tagCGFloat = CGFloat(tag)

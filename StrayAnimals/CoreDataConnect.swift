@@ -39,10 +39,9 @@ class CoreDataConnect {
                 
                 insetData.setValue(Double(value),forKey: key)
                 
-            }else if t == .BooleanAttributeType {
+            } else if t == .BooleanAttributeType {
                 
                 insetData.setValue((value == "true" ? true : false),forKey: key)
-                
             }
             else {
                 
