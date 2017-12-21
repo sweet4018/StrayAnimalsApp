@@ -18,6 +18,7 @@ class HomeDetailTopView: UIView {
     
     var animal : Animals? {
         didSet{
+            
             imageURLs = animal!.image!
             collectionView.reloadData()
         }
@@ -90,6 +91,10 @@ extension HomeDetailTopView: UICollectionViewDelegate, UICollectionViewDataSourc
         let url = imageURLs
         cell.bgImageView.kf_setImageWithURL(NSURL(string: url)!, placeholderImage: nil, optionsInfo: nil, progressBlock: nil) { (image, error, cacheType, imageURL) in
             cell.placeholderButton.hidden = true
+            
+            if cell.bgImageView == nil {
+                cell.bgImageView.image = UIImage(named: "noAnimal")
+            }
         }
         return cell
     }

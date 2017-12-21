@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		18CA4522AB4491D4D1680CE9 /* Pods_StrayAnimals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44E24E600B63EEBA8934A468 /* Pods_StrayAnimals.framework */; };
+		DB0450EF1F93A17D000AB3E4 /* ClassifyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0450EE1F93A17D000AB3E4 /* ClassifyDetailViewController.swift */; };
 		DB0610AB1D91283F00567BC2 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0610AA1D91283F00567BC2 /* Const.swift */; };
 		DB0610AD1D912A6700567BC2 /* NewfeatureCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0610AC1D912A6700567BC2 /* NewfeatureCollectionViewController.swift */; };
 		DB0610B91D91372100567BC2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0610B81D91372100567BC2 /* TabBarController.swift */; };
@@ -20,6 +21,10 @@
 		DB0610C91D925B3600567BC2 /* MainCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0610C81D925B3600567BC2 /* MainCityViewController.swift */; };
 		DB0873C81D9E0CBB00972FFD /* AnimalViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0873C61D9E0CBB00972FFD /* AnimalViewCell.swift */; };
 		DB0873C91D9E0CBB00972FFD /* AnimalViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB0873C71D9E0CBB00972FFD /* AnimalViewCell.xib */; };
+		DB1437A21F81386F00793793 /* Animal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1437A01F81386F00793793 /* Animal+CoreDataProperties.swift */; };
+		DB1437A31F81386F00793793 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1437A11F81386F00793793 /* Animal.swift */; };
+		DB1437A61F813A4900793793 /* CoreDataConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1437A51F813A4900793793 /* CoreDataConnect.swift */; };
+		DB2175291F94DE8200A7DF50 /* LoadFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2175281F94DE8200A7DF50 /* LoadFooter.swift */; };
 		DB5863061D8FD58500E17C9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5863051D8FD58500E17C9C /* AppDelegate.swift */; };
 		DB58630D1D8FD58500E17C9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB58630C1D8FD58500E17C9C /* Assets.xcassets */; };
 		DB5863101D8FD58500E17C9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB58630E1D8FD58500E17C9C /* LaunchScreen.storyboard */; };
@@ -28,6 +33,8 @@
 		DB7D1A741DA92DBB00A99D3B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB7D1A681DA929D000A99D3B /* MapKit.framework */; };
 		DB7D1A771DAB7DAB00A99D3B /* MapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D1A751DAB7DAB00A99D3B /* MapTableViewCell.swift */; };
 		DB7D1A781DAB7DAB00A99D3B /* MapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB7D1A761DAB7DAB00A99D3B /* MapTableViewCell.xib */; };
+		DB7DADD21F8884E700766F51 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7DADD01F8884E700766F51 /* FavoriteTableViewCell.swift */; };
+		DB7DADD31F8884E700766F51 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB7DADD11F8884E700766F51 /* FavoriteTableViewCell.xib */; };
 		DB81B2CB1D928E4800EE7068 /* Animals.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB81B2CA1D928E4800EE7068 /* Animals.swift */; };
 		DB81B2CD1D92961000EE7068 /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB81B2CC1D92961000EE7068 /* NetworkTool.swift */; };
 		DB81B2D01D929C5300EE7068 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB81B2CE1D929C5300EE7068 /* CollectionViewCell.swift */; };
@@ -62,15 +69,22 @@
 		DB81B31D1D9A10ED00EE7068 /* DetailChoiceButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB81B31B1D9A10ED00EE7068 /* DetailChoiceButtonView.xib */; };
 		DB81B3301D9CBD6200EE7068 /* ShopDetailContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB81B32E1D9CBD6200EE7068 /* ShopDetailContentView.swift */; };
 		DB81B3311D9CBD6200EE7068 /* ShopDetailContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB81B32F1D9CBD6200EE7068 /* ShopDetailContentView.xib */; };
+		DB8BC0991F933ED0006037EF /* ClassifyMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC0981F933ED0006037EF /* ClassifyMainView.swift */; };
+		DB8BC09B1F936B6D006037EF /* ClassifyVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC09A1F936B6D006037EF /* ClassifyVerticalButton.swift */; };
+		DB8BC09D1F936BA2006037EF /* BaseClassify.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC09C1F936BA2006037EF /* BaseClassify.swift */; };
 		DB9C20B41E4488B9001D99EF /* FeedBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20B31E4488B9001D99EF /* FeedBackViewController.swift */; };
 		DB9C20BD1E45CF95001D99EF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20BB1E45CF95001D99EF /* AboutViewController.swift */; };
 		DB9C20BE1E45CF95001D99EF /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB9C20BC1E45CF95001D99EF /* AboutViewController.xib */; };
 		DB9C20C01E45E136001D99EF /* FileTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C20BF1E45E136001D99EF /* FileTool.swift */; };
+		DBDB936F1F85141600AADDFE /* StrayAnimals.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DBDB936D1F85141500AADDFE /* StrayAnimals.xcdatamodeld */; };
+		DBE764871FAEE89300A29F5E /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE764861FAEE89300A29F5E /* UIDevice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		012A372D1D5A93C1C8A6A6A9 /* Pods-StrayAnimals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StrayAnimals.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StrayAnimals/Pods-StrayAnimals.debug.xcconfig"; sourceTree = "<group>"; };
 		44E24E600B63EEBA8934A468 /* Pods_StrayAnimals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StrayAnimals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB0450EE1F93A17D000AB3E4 /* ClassifyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassifyDetailViewController.swift; sourceTree = "<group>"; };
+		DB05900D1F812BF90098A097 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		DB0610AA1D91283F00567BC2 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		DB0610AC1D912A6700567BC2 /* NewfeatureCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewfeatureCollectionViewController.swift; sourceTree = "<group>"; };
 		DB0610B81D91372100567BC2 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -83,6 +97,10 @@
 		DB0610C81D925B3600567BC2 /* MainCityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCityViewController.swift; sourceTree = "<group>"; };
 		DB0873C61D9E0CBB00972FFD /* AnimalViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalViewCell.swift; sourceTree = "<group>"; };
 		DB0873C71D9E0CBB00972FFD /* AnimalViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnimalViewCell.xib; sourceTree = "<group>"; };
+		DB1437A01F81386F00793793 /* Animal+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Animal+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DB1437A11F81386F00793793 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		DB1437A51F813A4900793793 /* CoreDataConnect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataConnect.swift; sourceTree = "<group>"; };
+		DB2175281F94DE8200A7DF50 /* LoadFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadFooter.swift; sourceTree = "<group>"; };
 		DB5863021D8FD58500E17C9C /* StrayAnimals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StrayAnimals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB5863051D8FD58500E17C9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB58630C1D8FD58500E17C9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +111,8 @@
 		DB7D1A681DA929D000A99D3B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DB7D1A751DAB7DAB00A99D3B /* MapTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTableViewCell.swift; sourceTree = "<group>"; };
 		DB7D1A761DAB7DAB00A99D3B /* MapTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapTableViewCell.xib; sourceTree = "<group>"; };
+		DB7DADD01F8884E700766F51 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		DB7DADD11F8884E700766F51 /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteTableViewCell.xib; sourceTree = "<group>"; };
 		DB81B2CA1D928E4800EE7068 /* Animals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animals.swift; sourceTree = "<group>"; };
 		DB81B2CC1D92961000EE7068 /* NetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTool.swift; sourceTree = "<group>"; };
 		DB81B2CE1D929C5300EE7068 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -128,10 +148,15 @@
 		DB81B31B1D9A10ED00EE7068 /* DetailChoiceButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailChoiceButtonView.xib; sourceTree = "<group>"; };
 		DB81B32E1D9CBD6200EE7068 /* ShopDetailContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopDetailContentView.swift; sourceTree = "<group>"; };
 		DB81B32F1D9CBD6200EE7068 /* ShopDetailContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopDetailContentView.xib; sourceTree = "<group>"; };
+		DB8BC0981F933ED0006037EF /* ClassifyMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassifyMainView.swift; sourceTree = "<group>"; };
+		DB8BC09A1F936B6D006037EF /* ClassifyVerticalButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassifyVerticalButton.swift; sourceTree = "<group>"; };
+		DB8BC09C1F936BA2006037EF /* BaseClassify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseClassify.swift; sourceTree = "<group>"; };
 		DB9C20B31E4488B9001D99EF /* FeedBackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedBackViewController.swift; sourceTree = "<group>"; };
 		DB9C20BB1E45CF95001D99EF /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		DB9C20BC1E45CF95001D99EF /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		DB9C20BF1E45E136001D99EF /* FileTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileTool.swift; sourceTree = "<group>"; };
+		DBDB936E1F85141600AADDFE /* StrayAnimals.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StrayAnimals.xcdatamodel; sourceTree = "<group>"; };
+		DBE764861FAEE89300A29F5E /* UIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		F2C09C71EE3AB645CAFC0A0C /* Pods-StrayAnimals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StrayAnimals.release.xcconfig"; path = "Pods/Target Support Files/Pods-StrayAnimals/Pods-StrayAnimals.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,6 +185,7 @@
 		34860CDEA83F0C059BCAA903 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DB05900D1F812BF90098A097 /* libsqlite3.tbd */,
 				DB7D1A681DA929D000A99D3B /* MapKit.framework */,
 				44E24E600B63EEBA8934A468 /* Pods_StrayAnimals.framework */,
 			);
@@ -191,6 +217,7 @@
 		DB0610A51D90E15C00567BC2 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				DB1437A41F813A1C00793793 /* CoreData */,
 				DB0610BC1D92320300567BC2 /* Extension */,
 				DB0610B71D9136EC00567BC2 /* Controller */,
 				DB0610A91D9127F300567BC2 /* Tools */,
@@ -236,6 +263,7 @@
 				DB81B2CC1D92961000EE7068 /* NetworkTool.swift */,
 				DB81B2E01D936D0F00EE7068 /* SwiftDictModel.swift */,
 				DB81B2F11D937FF600EE7068 /* RefreshHeader.swift */,
+				DB2175281F94DE8200A7DF50 /* LoadFooter.swift */,
 				DB9C20BF1E45E136001D99EF /* FileTool.swift */,
 			);
 			name = Tools;
@@ -264,6 +292,7 @@
 				DB81B2E91D9370BE00EE7068 /* UIBarButton.swift */,
 				DB81B2F91D93A86500EE7068 /* UIImageVIew.swift */,
 				DB81B2FB1D9659C200EE7068 /* String.swift */,
+				DBE764861FAEE89300A29F5E /* UIDevice.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -276,6 +305,14 @@
 				DB9C20C11E46D6E9001D99EF /* Controller */,
 			);
 			name = Classify;
+			sourceTree = "<group>";
+		};
+		DB1437A41F813A1C00793793 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				DB1437A51F813A4900793793 /* CoreDataConnect.swift */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 		DB5862F91D8FD58500E17C9C = {
@@ -303,6 +340,7 @@
 				DB0610A41D90DF3A00567BC2 /* Supporting Files */,
 				DB0610A21D90DED700567BC2 /* Classes */,
 				DB5863051D8FD58500E17C9C /* AppDelegate.swift */,
+				DBDB936D1F85141500AADDFE /* StrayAnimals.xcdatamodeld */,
 				DB81B2FD1D965A4300EE7068 /* StrayAnimals-Bridging-Header.h */,
 			);
 			path = StrayAnimals;
@@ -368,6 +406,8 @@
 		DB81B3251D9AAA0A00EE7068 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DB1437A01F81386F00793793 /* Animal+CoreDataProperties.swift */,
+				DB1437A11F81386F00793793 /* Animal.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -375,6 +415,8 @@
 		DB81B3261D9AAA1500EE7068 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DB7DADD01F8884E700766F51 /* FavoriteTableViewCell.swift */,
+				DB7DADD11F8884E700766F51 /* FavoriteTableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -416,6 +458,7 @@
 			isa = PBXGroup;
 			children = (
 				DB0610C41D92395300567BC2 /* ClassifyViewController.swift */,
+				DB0450EE1F93A17D000AB3E4 /* ClassifyDetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -423,6 +466,8 @@
 		DB9C20C21E46D6EF001D99EF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DB8BC0981F933ED0006037EF /* ClassifyMainView.swift */,
+				DB8BC09A1F936B6D006037EF /* ClassifyVerticalButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -430,6 +475,7 @@
 		DB9C20C31E46D6F6001D99EF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DB8BC09C1F936BA2006037EF /* BaseClassify.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -472,7 +518,7 @@
 				TargetAttributes = {
 					DB5863011D8FD58500E17C9C = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = D5K4948929;
+						DevelopmentTeam = R7CU7LQBHA;
 					};
 				};
 			};
@@ -504,6 +550,7 @@
 				DB5863101D8FD58500E17C9C /* LaunchScreen.storyboard in Resources */,
 				DB9C20BE1E45CF95001D99EF /* AboutViewController.xib in Resources */,
 				DB7D1A781DAB7DAB00A99D3B /* MapTableViewCell.xib in Resources */,
+				DB7DADD31F8884E700766F51 /* FavoriteTableViewCell.xib in Resources */,
 				DB81B3171D990C1600EE7068 /* HomeDetailCollectionViewCell.xib in Resources */,
 				DB81B31D1D9A10ED00EE7068 /* DetailChoiceButtonView.xib in Resources */,
 				DB81B2E81D936D8B00EE7068 /* themes in Resources */,
@@ -620,26 +667,34 @@
 				DB9C20BD1E45CF95001D99EF /* AboutViewController.swift in Sources */,
 				DB0610C71D92395A00567BC2 /* MeViewController.swift in Sources */,
 				DB81B3161D990C1600EE7068 /* HomeDetailCollectionViewCell.swift in Sources */,
+				DBE764871FAEE89300A29F5E /* UIDevice.swift in Sources */,
 				DB81B31C1D9A10ED00EE7068 /* DetailChoiceButtonView.swift in Sources */,
 				DB9C20B41E4488B9001D99EF /* FeedBackViewController.swift in Sources */,
+				DB8BC0991F933ED0006037EF /* ClassifyMainView.swift in Sources */,
 				DB81B2CB1D928E4800EE7068 /* Animals.swift in Sources */,
 				DB81B30B1D98A55F00EE7068 /* BaseViewController.swift in Sources */,
 				DB0610BB1D9223EA00567BC2 /* NavigationController.swift in Sources */,
 				DB81B2CD1D92961000EE7068 /* NetworkTool.swift in Sources */,
 				DB81B2D51D92AA4B00EE7068 /* HomeDetailViewController.swift in Sources */,
 				DB0610C91D925B3600567BC2 /* MainCityViewController.swift in Sources */,
+				DB0450EF1F93A17D000AB3E4 /* ClassifyDetailViewController.swift in Sources */,
+				DB1437A61F813A4900793793 /* CoreDataConnect.swift in Sources */,
 				DB81B2EE1D937E3000EE7068 /* CityCollectionViewCell.swift in Sources */,
 				DB81B2EA1D9370BE00EE7068 /* UIBarButton.swift in Sources */,
 				DB0610BE1D92324500567BC2 /* UIColor.swift in Sources */,
 				DB81B3081D96638000EE7068 /* ThemeCell.swift in Sources */,
+				DB2175291F94DE8200A7DF50 /* LoadFooter.swift in Sources */,
 				DB81B2E11D936D0F00EE7068 /* SwiftDictModel.swift in Sources */,
 				DB81B3111D99090800EE7068 /* HomeDetailScrollView.swift in Sources */,
 				DB0610C51D92395300567BC2 /* ClassifyViewController.swift in Sources */,
 				DB81B2D31D929D4200EE7068 /* SearchResult.swift in Sources */,
 				DB5F45E41DA5F39D00D8E32B /* HelpDetailViewController.swift in Sources */,
+				DB1437A31F81386F00793793 /* Animal.swift in Sources */,
 				DB5863061D8FD58500E17C9C /* AppDelegate.swift in Sources */,
+				DB8BC09D1F936BA2006037EF /* BaseClassify.swift in Sources */,
 				DB81B3131D990A8800EE7068 /* HomeDetailTopView.swift in Sources */,
 				DB81B2F21D937FF600EE7068 /* RefreshHeader.swift in Sources */,
+				DB1437A21F81386F00793793 /* Animal+CoreDataProperties.swift in Sources */,
 				DB0610B91D91372100567BC2 /* TabBarController.swift in Sources */,
 				DB81B2FA1D93A86500EE7068 /* UIImageVIew.swift in Sources */,
 				DB0610AB1D91283F00567BC2 /* Const.swift in Sources */,
@@ -653,11 +708,14 @@
 				DB81B2EC1D937BDE00EE7068 /* CityViewController.swift in Sources */,
 				DB81B3191D9A0CFF00EE7068 /* HomeDetailButtonView.swift in Sources */,
 				DB81B2F01D937E7A00EE7068 /* CityCollectionReusableView.swift in Sources */,
+				DBDB936F1F85141600AADDFE /* StrayAnimals.xcdatamodeld in Sources */,
 				DB0610C31D92394200567BC2 /* FavoriteViewController.swift in Sources */,
 				DB0873C81D9E0CBB00972FFD /* AnimalViewCell.swift in Sources */,
+				DB8BC09B1F936B6D006037EF /* ClassifyVerticalButton.swift in Sources */,
 				DB7D1A771DAB7DAB00A99D3B /* MapTableViewCell.swift in Sources */,
 				DB0610AD1D912A6700567BC2 /* NewfeatureCollectionViewController.swift in Sources */,
 				DB81B2DB1D92D8D400EE7068 /* UIView.swift in Sources */,
+				DB7DADD21F8884E700766F51 /* FavoriteTableViewCell.swift in Sources */,
 				DB81B2D71D92D6E100EE7068 /* DoubleTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -815,6 +873,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DBDB936D1F85141500AADDFE /* StrayAnimals.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DBDB936E1F85141600AADDFE /* StrayAnimals.xcdatamodel */,
+			);
+			currentVersion = DBDB936E1F85141600AADDFE /* StrayAnimals.xcdatamodel */;
+			path = StrayAnimals.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DB5862FA1D8FD58500E17C9C /* Project object */;
 }

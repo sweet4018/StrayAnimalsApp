@@ -7,4 +7,4 @@
 //
 #import <CommonCrypto/CommonCrypto.h>
 
-
+#include "sqlite3.h"

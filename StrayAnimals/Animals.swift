@@ -27,6 +27,7 @@ class Animals:NSObject {
     var remark : String?
     var update : String?
     var createTime : String?
+    var area: Int?
     
     init(dict:[String:AnyObject]){
        super.init()
@@ -47,5 +48,6 @@ class Animals:NSObject {
         remark = dict ["animal_remark"] as? String
         update = dict ["cDate"] as? String
         createTime = dict["animal_createtime"] as? String
+        area = dict["animal_area_pkid"] as? Int
     }
 }

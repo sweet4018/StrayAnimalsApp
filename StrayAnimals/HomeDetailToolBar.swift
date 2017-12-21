@@ -9,7 +9,12 @@
 import UIKit
 
 protocol HomeDetailToolBarDelegate: NSObjectProtocol {
+    
     func toolBarDidClickedTMALLButton()
+    
+    ///加入我的最愛
+    func toolBarDidClickedAddToMyFavorite(button: UIButton)
+    
 }
 
 
@@ -20,6 +25,7 @@ class HomeDetailToolBar: UIView {
     @IBOutlet weak var favoriteButton: UIButton!
     
     @IBOutlet weak var takeHomeButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         favoriteButton.layer.borderColor = ZYBlackColor().CGColor
@@ -28,10 +34,11 @@ class HomeDetailToolBar: UIView {
         takeHomeButton.layer.borderWidth = klineWidth
         favoriteButton.setImage(UIImage(named: "collect_1"), forState: .Normal)
         favoriteButton.setImage(UIImage(named: "collect_2"), forState: .Selected)
+        
     }
     
     @IBAction func likeButtonClick(sender: UIButton) {
-        sender.selected = !sender.selected
+        delegate!.toolBarDidClickedAddToMyFavorite(sender)
     }
     
 

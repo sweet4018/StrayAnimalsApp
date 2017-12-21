@@ -12,19 +12,49 @@ import Foundation
 extension UIView {
     /// X值
     var x: CGFloat {
-        return self.frame.origin.x
+        get {
+            return frame.origin.x
+        }
+        set(newValue) {
+            var tempFrame: CGRect = frame
+            tempFrame.origin.x    = newValue
+            frame                 = tempFrame
+        }
     }
+    
     /// Y值
     var y: CGFloat {
-        return self.frame.origin.y
+        get {
+            return frame.origin.y
+        }
+        set(newValue) {
+            var tempFrame: CGRect = frame
+            tempFrame.origin.y    = newValue
+            frame                 = tempFrame
+        }
     }
+    
     /// 寬度
     var width: CGFloat {
-        return self.frame.size.width
+        get {
+            return frame.size.width
+        }
+        set(newValue) {
+            var tempFrame: CGRect = frame
+            tempFrame.size.width = newValue
+            frame = tempFrame
+        }
     }
     ///高度
     var height: CGFloat {
-        return self.frame.size.height
+        get {
+            return frame.size.height
+        }
+        set(newValue) {
+            var tempFrame: CGRect = frame
+            tempFrame.size.height = newValue
+            frame                 = tempFrame
+        }
     }
     var size: CGSize {
         return self.frame.size

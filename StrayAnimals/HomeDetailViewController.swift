@@ -8,6 +8,8 @@
 
 import UIKit
 import Kingfisher
+import CoreData
+import SVProgressHUD
 
 class HomeDetailViewController: BaseViewController , HomeDetailToolBarDelegate{
     
@@ -16,6 +18,12 @@ class HomeDetailViewController: BaseViewController , HomeDetailToolBarDelegate{
     var result : SearchResult?
     
     var type = String()
+
+    var isFavoriteBtnSelect: Bool!
+    
+    let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    
+    let coreDataTool = CoreDataConnect()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +39,7 @@ class HomeDetailViewController: BaseViewController , HomeDetailToolBarDelegate{
         view.addSubview(scrollView)
         //添加底下欄
         view.addSubview(toolBarView)
+        toolBarView.favoriteButton.selected = isFavoriteBtnSelect
         scrollView.animal = animals
      
         scrollView.snp_makeConstraints { (make) in
@@ -46,12 +55,19 @@ class HomeDetailViewController: BaseViewController , HomeDetailToolBarDelegate{
     }
     ///分享按鈕點擊
     func shareBBItemClick(){
+        
         let text = "動物編號：" + self.animals!.ID! + "\n\n收容所名稱：" + self.animals!.name! + "\n\n收容所地址：" + self.animals!.address! + "\n\n收容所電話：" + self.animals!.tel! + "\n\n備註：" + self.animals!.remark!
+        
         let url = self.animals!.image!
-        let img = UIImageView(frame : CGRect (x: 0, y: 0, width: 50, height: 50))
-        img.kf_setImageWithURL(NSURL(string: url)!, placeholderImage: nil, optionsInfo: nil, progressBlock: nil) { (image, error, cacheType, imageURL) in
-        let activityController = UIActivityViewController(activityItems:[img.image!,text] , applicationActivities: nil)
-        self.presentViewController(activityController, animated: true, completion: nil)
+        if url != "" {
+            let img = UIImageView(frame : CGRect (x: 0, y: 0, width: 50, height: 50))
+            img.kf_setImageWithURL(NSURL(string: url)!, placeholderImage: nil, optionsInfo: nil, progressBlock: nil) { (image, error, cacheType, imageURL) in
+            let activityController = UIActivityViewController(activityItems:[img.image!,text] , applicationActivities: nil)
+            self.presentViewController(activityController, animated: true, completion: nil)
+            }
+        }else {
+            let activityController = UIActivityViewController(activityItems:[text] , applicationActivities: nil)
+            self.presentViewController(activityController, animated: true, completion: nil)
         }
     }
     
@@ -76,6 +92,61 @@ class HomeDetailViewController: BaseViewController , HomeDetailToolBarDelegate{
         let doneAction = UIAlertAction(title: "完成", style: .Cancel, handler: nil)
         menu.addAction(doneAction)
         self.presentViewController(menu, animated: true, completion: nil)
+    }
+    
+    ///點擊後加入我的最愛
+    func toolBarDidClickedAddToMyFavorite(button: UIButton) {
+        
+        if !button.selected {
+
+            //圖片處理
+            var imageData: NSData?
+            let url = self.animals!.image!
+            let img = UIImageView(frame : CGRect (x: 0, y: 0, width: 50, height: 50))
+            img.kf_setImageWithURL(NSURL(string: url)!, placeholderImage: nil, optionsInfo: nil, progressBlock: nil) { (image, error, cacheType, imageURL) in
+                if let image = img.image {
+                imageData = UIImagePNGRepresentation(image)
+            }}
+            
+            let insertResult = coreDataTool.insert(coreDataEntityAnimal, attributeInfo: [
+                "id" : self.animals!.ID!,
+                "subID" : self.animals!.subID!,
+                "name" : self.animals!.name!,
+                "address" : self.animals!.address!,
+                "tel" : self.animals!.tel!,
+                "sex" : self.animals!.sex!,
+                "color" : self.animals!.color!,
+                "age" : self.animals!.age!,
+                "foundPlace" : self.animals!.age!,
+                "sterilization" : self.animals!.sterilization!,
+                "bacterin" : self.animals!.bacterin!,
+                "remark" : self.animals!.remark!,
+                "update" : self.animals!.update!,
+                "createTime" : self.animals!.createTime!,
+                "area" : String(self.animals!.area!),
+                "imageURL" : String(self.animals!.image!)],imageData: imageData)
+
+            if insertResult {
+                SVProgressHUD.showSuccessWithStatus("已加入我的最愛")
+            }else {
+                SVProgressHUD.showErrorWithStatus("加入失敗")
+            }
+            
+            button.selected = insertResult
+            
+        }else {
+            
+            let ID = self.animals!.ID!
+            let predicate = NSPredicate(format: "id == %@",ID)
+            let deleteResult = coreDataTool.delete(coreDataEntityAnimal, predicate: predicate)
+            
+            if deleteResult {
+                SVProgressHUD.showSuccessWithStatus("已移除我的最愛")
+            }else {
+                SVProgressHUD.showErrorWithStatus("移除失敗")
+            }
+            button.selected = !deleteResult
+        }
     }
   }
 

@@ -17,21 +17,22 @@ class HomeViewController: MainCityViewController , DoubleTextViewDelegate {
 
     var animalsArray = [Animals]()
     
+    private let coreDataTool = CoreDataConnect()
+    
     weak var collectionView : UICollectionView?
+    
+    var skipCount = 10
     
     //加入DoubleTextView
     private var backgroundScrollView: UIScrollView!
     private var doubleTextView: DoubleTextView!
     private var albumTableView: MainTableView!
     private var themes: ThemeModels?
+    private var nowCity: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkTool.shareNetworkTool.loadProductData { [weak self] (animals) in
-        self!.animalsArray = animals
-        self?.collectionView!.reloadData()
-        self!.albumTableView.mj_header.beginRefreshing()
-        }
+
         //初始化導航列内容
         setNav()
         //設置scrollView
@@ -42,8 +43,43 @@ class HomeViewController: MainCityViewController , DoubleTextViewDelegate {
         setalbumTableView()
         //下拉加載刷新
         collectionView?.mj_header.beginRefreshing()
+        self.albumTableView.mj_header.beginRefreshing()
+        
+        //城市選擇監聽
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HomeViewController.refreshViewWithCityChange(_:)), name: SD_CurrentCityChange_Notification, object: nil)
     }
- 
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.skipCount = 10
+    }
+    
+    // MARK: 城市刷新
+    func refreshViewWithCityChange(noti: NSNotification) {
+        
+        self.nowCity = noti.object as? String
+        
+        weak var tmpSelf = self
+        // 模擬延時加載
+        let time = dispatch_time(DISPATCH_TIME_NOW,Int64(1.0 * Double(NSEC_PER_SEC)))
+        SVProgressHUD.showWithStatus("正在加載...")
+        dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
+            tmpSelf!.collectionView!.mj_header.endRefreshing()
+            NetworkTool.shareNetworkTool.loadProductData("0",city: (self.nowCity)!, finished: {[weak self] (animals) in
+                if animals.count == 0 {
+                    SVProgressHUD.showErrorWithStatus("數據加載失敗")
+                    tmpSelf!.collectionView!.mj_header.endRefreshing()
+                    return
+                }
+                self!.setupCollectionView()
+                self!.animalsArray = animals
+                self?.collectionView!.reloadData()
+                tmpSelf!.collectionView!.mj_header.endRefreshing()
+                })
+        }
+    }
+    
     /// 設置collectionView
     private func setupCollectionView() {
         let collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UICollectionViewFlowLayout())
@@ -55,6 +91,7 @@ class HomeViewController: MainCityViewController , DoubleTextViewDelegate {
         backgroundScrollView.addSubview(collectionView)
         self.collectionView = collectionView
         setCollectionViewHeader(self, refreshingAction: #selector(HomeViewController.pullLoadCollection), imageFrame: CGRectMake((ScreenWidth - SD_RefreshImage_Width) * 0.5, 10, SD_RefreshImage_Width, SD_RefreshImage_Height), tableView: collectionView)
+        setCollectionFooter(self, refreshingAction: #selector(HomeViewController.pullLoadAnimalData), imageFrame: CGRectMake((ScreenWidth - SD_RefreshImage_Width) * 0.5, 10, SD_RefreshImage_Width, SD_RefreshImage_Height), collection: self.collectionView!)
     }
     
     private func setCollectionViewHeader(refreshingTarget: AnyObject, refreshingAction: Selector, imageFrame: CGRect, tableView: UICollectionView) {
@@ -63,9 +100,15 @@ class HomeViewController: MainCityViewController , DoubleTextViewDelegate {
         tableView.mj_header = header
     }
     
+    private func setCollectionFooter(refreshingTarget: AnyObject,refreshingAction: Selector, imageFrame: CGRect,collection: UICollectionView) {
+        let footer = LoadFooter(refreshingTarget: refreshingTarget, refreshingAction: refreshingAction)
+        footer.gifView!.frame = imageFrame
+        collectionView!.mj_footer = footer
+    }
+    
     private func setScrollView() {
         self.automaticallyAdjustsScrollViewInsets = false
-        backgroundScrollView = UIScrollView(frame: CGRectMake(0, 0, ScreenWidth, ScreenHeight - NavigationH - 49))
+        backgroundScrollView = UIScrollView(frame: CGRectMake(0, 0, ScreenWidth, ScreenHeight - NavigationH - TabbarH))
         backgroundScrollView.backgroundColor = theme.BackgroundColor
         backgroundScrollView.contentSize = CGSizeMake(ScreenWidth * 2.0, 0)
         backgroundScrollView.showsHorizontalScrollIndicator = false
@@ -74,11 +117,9 @@ class HomeViewController: MainCityViewController , DoubleTextViewDelegate {
         backgroundScrollView.delegate = self
         backgroundScrollView.scrollsToTop = false
         view.addSubview(backgroundScrollView)
-        
     }
     
     private func setNav() {
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "附近", titleClocr: UIColor.blackColor(), targer: self, action: #selector(HomeViewController.nearClick))
         doubleTextView = DoubleTextView(leftText: "探索", rigthText: "幫助");
         doubleTextView.frame = CGRectMake(0, 0, 120, 44)
         doubleTextView.delegate = self
@@ -98,15 +139,19 @@ class HomeViewController: MainCityViewController , DoubleTextViewDelegate {
         tableView.mj_header = header
     }
     
-        ///MARK:- 下拉加載刷新數據
-        func pullLoadCollection() {
-            weak var tmpSelf = self
-            // 模擬延時加載
-            let time = dispatch_time(DISPATCH_TIME_NOW,Int64(1.0 * Double(NSEC_PER_SEC)))
-            SVProgressHUD.showWithStatus("正在加載...")
+    ///MARK:- 下拉加載刷新數據
+    func pullLoadCollection() {
+        
+        animalsArray.removeAll()
+        weak var tmpSelf = self
+        // 模擬延時加載
+        let time = dispatch_time(DISPATCH_TIME_NOW,Int64(1.0 * Double(NSEC_PER_SEC)))
+        SVProgressHUD.showWithStatus("正在加載...")
+
+        if self.nowCity != nil  {
             dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
-                 tmpSelf!.collectionView!.mj_header.endRefreshing()
-                 NetworkTool.shareNetworkTool.loadProductData { [weak self] (animals) in
+                
+                NetworkTool.shareNetworkTool.loadProductData("0",city: (self.nowCity)!, finished: {[weak self] (animals) in
                     if animals.count == 0 {
                         SVProgressHUD.showErrorWithStatus("數據加載失敗")
                         tmpSelf!.collectionView!.mj_header.endRefreshing()
@@ -116,11 +161,30 @@ class HomeViewController: MainCityViewController , DoubleTextViewDelegate {
                     self!.animalsArray = animals
                     self?.collectionView!.reloadData()
                     tmpSelf!.collectionView!.mj_header.endRefreshing()
-                }
+                    })
+            }
+            
+        }else {
+            
+            dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
+                
+                NetworkTool.shareNetworkTool.loadProductData("10",city: "全部", finished: {[weak self] (animals) in
+                    if animals.count == 0 {
+                        SVProgressHUD.showErrorWithStatus("數據加載失敗")
+                        tmpSelf!.collectionView!.mj_header.endRefreshing()
+                        return
+                    }
+                    self!.setupCollectionView()
+                    self!.animalsArray = animals
+                    self?.collectionView!.reloadData()
+                    tmpSelf!.collectionView!.mj_header.endRefreshing()
+                })
             }
         }
+    }
     
     func pullLoadAlbumData() {
+        
         weak var tmpSelf = self
         let time = dispatch_time(DISPATCH_TIME_NOW,Int64(1.0 * Double(NSEC_PER_SEC)))
         SVProgressHUD.showWithStatus("正在加載...")
@@ -136,6 +200,33 @@ class HomeViewController: MainCityViewController , DoubleTextViewDelegate {
                 tmpSelf!.albumTableView.mj_header.endRefreshing()
                 SVProgressHUD.dismiss()
             }
+        }
+    }
+    
+    func pullLoadAnimalData() {
+        
+        self.skipCount += 10
+        weak var tmpSelf = self
+        let time = dispatch_time(DISPATCH_TIME_NOW,Int64(1.0 * Double(NSEC_PER_SEC)))
+        SVProgressHUD.showWithStatus("正在加載...")
+        dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
+            
+            var allCity = "全部"
+            if self.nowCity != nil {
+                allCity = self.nowCity!
+            }
+            
+            NetworkTool.shareNetworkTool.loadProductData (String(self.skipCount),city: allCity, finished:{[weak self] (animals) in
+                if animals.count == 0 {
+                    SVProgressHUD.showErrorWithStatus("數據加載失敗")
+                    tmpSelf!.collectionView!.mj_footer.endRefreshing()
+                    return
+                }
+                
+                self!.animalsArray += animals
+                self?.collectionView!.reloadData()
+                tmpSelf!.collectionView!.mj_footer.endRefreshing()
+            })
         }
     }
     
@@ -167,10 +258,24 @@ extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSo
     
     // MARK: - UICollectionViewDelegate
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let productDetailVC = HomeDetailViewController()
-        productDetailVC.title = "動物詳情"
-        productDetailVC.animals = animalsArray[indexPath.item]
-        navigationController?.pushViewController(productDetailVC, animated: true)
+        
+        let animalDetailVC = HomeDetailViewController()
+        animalDetailVC.title = "動物詳情"
+        
+        let oneAnimal = animalsArray[indexPath.item]
+        let predicateName = oneAnimal.ID
+        let predicate = NSPredicate(format: "id == %@", predicateName!)
+        let searchResult = coreDataTool.fetch(coreDataEntityAnimal, predicate: predicate, sort: nil, limit: nil)
+        var isFavBtnSelect: Bool
+        if searchResult?.count > 0 {
+            isFavBtnSelect = true
+        }else {
+            isFavBtnSelect = false
+        }
+        
+        animalDetailVC.isFavoriteBtnSelect = isFavBtnSelect
+        animalDetailVC.animals = oneAnimal
+        navigationController?.pushViewController(animalDetailVC, animated: true)
     }
     
     // MARK: - UICollectionViewDelegateFlowLayout
@@ -181,7 +286,7 @@ extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSo
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(5, 5, 5, 5)
+        return UIEdgeInsetsMake(5, 5, 55, 5)
     }
     
     // MARK: - CollectionViewCellDelegate

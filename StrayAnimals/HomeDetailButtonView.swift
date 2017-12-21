@@ -115,14 +115,32 @@ extension HomeDetailButtonView :DetailChoiceButtonViewDelegate,UITableViewDataSo
         switch indexPath.row {
         case 0:
             cell.titleLabel.text = "編號"
-            cell.detailLabel?.text = String(animalDetail!.ID!)
+            var animalID: String
+            if let ID = animalDetail?.ID {
+                animalID = ID
+            }else{
+                animalID = "未提供"
+            }
+            cell.detailLabel.text = animalID
+            
         case 1:
             cell.titleLabel.text = "子編號"
-            cell.detailLabel?.text = String(animalDetail!.subID!)
+            var animalSubID: String
+            if let subID = animalDetail?.subID {
+                animalSubID = subID
+            }else {
+                animalSubID = "未提供"
+            }
+            cell.detailLabel?.text = animalSubID
         case 2:
             cell.titleLabel.text = "體型"
-            let type = String(animalDetail!.type!)
-            switch type {
+            var animalType: String
+            if let type = animalDetail?.type {
+                animalType = type
+            }else {
+                animalType = ""
+            }
+            switch animalType {
                 case "MINI":
                 cell.detailLabel.text = "迷你"
                 case "SMALL":
@@ -137,7 +155,12 @@ extension HomeDetailButtonView :DetailChoiceButtonViewDelegate,UITableViewDataSo
             
         case 3:
             cell.titleLabel.text = "性別"
-            let sex = String(animalDetail?.sex!)
+            var sex: String
+            if let animalSex = animalDetail?.sex {
+                sex = animalSex
+            }else {
+                sex = ""
+            }
             switch sex {
             case "M":
                 cell.detailLabel.text = "男生"
@@ -149,58 +172,81 @@ extension HomeDetailButtonView :DetailChoiceButtonViewDelegate,UITableViewDataSo
             
         case 4:
             cell.titleLabel.text = "毛色"
-            cell.detailLabel!.text = String(animalDetail!.color!)
+            if let animalColor = animalDetail?.color {
+                cell.detailLabel!.text = animalColor
+            }else {
+                cell.detailLabel!.text = "未提供"
+            }
+            
         case 5:
             cell.titleLabel.text = "年紀"
-            let age = String(animalDetail?.age!)
-            if age == "CHILD" {
-                cell.detailLabel?.text = "幼年"
-            }else{
-                cell.detailLabel?.text = "成年"
+            
+            if let age = animalDetail?.age {
+                if age == "CHILD" {
+                    cell.detailLabel?.text = "幼年"
+                }else{
+                    cell.detailLabel?.text = "成年"
+                }
+            }else {
+                cell.detailLabel?.text = "未提供"
             }
+            
         case 6:
             cell.titleLabel.text = "尋獲地"
-            let foundPlace = String(animalDetail!.foundPlace!)
-            if foundPlace == "" {
-                cell.detailLabel!.text = "未輸入"
-            }else{
-                cell.detailLabel!.text = String(animalDetail!.foundPlace!)
+            
+            if let animalFoundPlace = animalDetail?.foundPlace {
+                if animalFoundPlace == "" {
+                    cell.detailLabel!.text = "未輸入"
+                }else{
+                    cell.detailLabel!.text = animalFoundPlace
+                }
+            }else {
+               cell.detailLabel!.text = "未輸入"
             }
+            
             
         case 7:
             cell.titleLabel.text = "是否絕育"
-            let sterilization = String(animalDetail?.sterilization!)
-            switch sterilization {
-            case "T" :
-                cell.detailLabel?.text = "已絕育"
-            case "F" :
-                cell.detailLabel?.text = "未絕育"
-            default:
+            if let sterilization = animalDetail?.sterilization {
+                switch sterilization {
+                case "T" :
+                    cell.detailLabel?.text = "已絕育"
+                case "F" :
+                    cell.detailLabel?.text = "未絕育"
+                default:
+                    cell.detailLabel?.text = "未輸入"
+                }
+            }else {
                 cell.detailLabel?.text = "未輸入"
             }
+            
         case 8:
             cell.titleLabel.text = "施打狂犬疫苗"
-            let bacterin = String(animalDetail?.bacterin!)
-            switch bacterin {
-            case "T" :
-                cell.detailLabel?.text = "已施打"
-            case "F" :
-                cell.detailLabel?.text = "未施打"
-            default:
+            if let bacterin = animalDetail?.bacterin {
+                switch bacterin {
+                case "T" :
+                    cell.detailLabel?.text = "已施打"
+                case "F" :
+                    cell.detailLabel?.text = "未施打"
+                default:
+                    cell.detailLabel?.text = "未輸入"
+                }
+            }else {
                 cell.detailLabel?.text = "未輸入"
             }
+            
         default:
             cell.titleLabel.text = "備註"
-            let remark = String(animalDetail!.remark!)
-            if remark == "" {
+            if let remark = animalDetail?.remark {
+                if remark == "" {
+                    cell.detailLabel!.text = "無"
+                }else{
+                    cell.detailLabel!.text = remark
+                }
+            }else {
                 cell.detailLabel!.text = "無"
-            }else{
-                cell.detailLabel!.text = String(animalDetail!.remark!)
             }
         }
- 
         return cell
     }
-
-
 }

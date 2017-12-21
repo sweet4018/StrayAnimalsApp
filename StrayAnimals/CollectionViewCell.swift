@@ -34,6 +34,10 @@ class CollectionViewCell: UICollectionViewCell {
             let url = animal!.image!
             imageView.kf_setImageWithURL(NSURL(string: url)!, placeholderImage: nil, optionsInfo: nil, progressBlock: nil) { (image, error, cacheType, imageURL) in
                 self.placeholderBtn.hidden = true
+                
+                if image == nil {
+                    self.imageView.image = UIImage(named: "noAnimal")
+                }
             }
             titleLabel.text = animal!.name
             timeLabel.text = "更新時間：" + String(animal!.update!)
