@@ -403,3 +403,12 @@ func insert(entityName: String ,attributeInfo: [String:String],imageData: NSData
     }
 ```
 
+### 作者
+
+* [Chen, Cheng-Yang](https://www.facebook.com/profile.php?id=100000364403933)
+
+* Email:```sweet4018@gmail.com```
+
+### 結語
+
+感謝您的觀看
