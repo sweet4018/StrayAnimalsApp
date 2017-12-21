@@ -34,7 +34,8 @@
 ****
 [引導畫面、選擇城市]
 
-<img src="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-07-2017%2000-08-03.gif" , height=500>	
+!["DemoVideo"](https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-07-2017%2000-08-03.gif)
+
 * 從`AppDelegate.swift`啟動程序
 ```
 	 class AppDelegate: UIResponder, UIApplicationDelegate {
