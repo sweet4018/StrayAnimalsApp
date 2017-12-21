@@ -283,8 +283,14 @@ class NetworkTool: NSObject {
     }
 ```
 ****
-[我的]
+[我的最愛]
 
+!["DemoVideo"] (https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/12月-21-2017%2022-56-40.gif)
+
+* 儲存資料庫的機制是使用```CoreData```
+
+****
+[我的]
 
 !["DemoVideo"](https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-07-2017%2000-24-48.gif)
 
