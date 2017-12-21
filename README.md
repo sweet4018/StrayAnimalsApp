@@ -283,8 +283,95 @@ class NetworkTool: NSObject {
     }
 ```
 ****
-[我的]
+[我的最愛]
 
+!["DemoVideo"](https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/12月-21-2017%2022-56-40.gif)
+
+* 儲存資料庫的機制是使用```CoreData```，來一段新增資料
+```
+func insert(entityName: String ,attributeInfo: [String:String],imageData: NSData?) -> Bool {
+        
+        //先刪除此資料，避免資料重複
+        let key: String = attributeInfo["id"]!
+        let predicate = NSPredicate(format: "name == %@",key)
+        let deleteResult = delete(coreDataEntityAnimal, predicate: predicate)
+        print("刪除結果:\(deleteResult)")
+        
+        let insetData = NSEntityDescription.insertNewObjectForEntityForName("Animal", inManagedObjectContext: self.managedObjectContext) as! MyType
+        
+        for (key,value) in attributeInfo {
+            
+            let t = insetData.entity.attributesByName[key]?.attributeType
+            
+            if t == .Integer16AttributeType  || t == .Integer32AttributeType || t == .Integer64AttributeType {
+                
+                insetData.setValue(Int(value),forKey: key)
+                
+            } else if t == .DoubleAttributeType || t == .FloatAttributeType {
+                
+                insetData.setValue(Double(value),forKey: key)
+                
+            } else if t == .BooleanAttributeType {
+                
+                insetData.setValue((value == "true" ? true : false),forKey: key)
+            }
+            else {
+                
+                insetData.setValue(value, forKey: key)
+            }
+        }
+        
+        //圖片處理
+        if let animalImage = imageData {
+            
+            insetData.image = animalImage
+        }
+        
+        do {
+            
+            try managedObjectContext.save()
+            
+            return true
+            
+        }catch {
+            
+            fatalError("\(error)")        
+        }
+
+        return false
+    }
+```
+****
+[分類]
+
+!["DemoVideo"](https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/12月-21-2017%2022-57-25.gif)
+
+* 使用 ```UIPickerView``` 製作，供使用者選擇條件，在搜尋
+```
+    //MARK: 設置View、Label
+    private func setupView(title: String, tag: Int) -> UIView {
+        
+        let tagCGFloat = CGFloat(tag)
+        let view = UIView()
+        view.y = (tagCGFloat*150) + (tagCGFloat*20)
+        view.width = ScreenWidth
+        view.height = 150
+        view.backgroundColor = ZYWhileColor()
+        
+        let titleLabel = setupLabel(title)
+        view.addSubview(titleLabel)
+        
+        let pickerView = UIPickerView(frame: CGRect(x: 0, y: view.bounds.minY+20, width: ScreenWidth, height: 130))
+        pickerView.tag = 100+tag
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        view.addSubview(pickerView)
+        
+        return view
+    }
+```
+****
+[我的]
 
 !["DemoVideo"](https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/2月-07-2017%2000-24-48.gif)
 
@@ -316,3 +403,12 @@ class NetworkTool: NSObject {
     }
 ```
 
+### 作者
+
+* [Chen, Cheng-Yang](https://www.facebook.com/profile.php?id=100000364403933)
+
+* Email:```sweet4018@gmail.com```
+
+### 結語
+
+感謝您的觀看
