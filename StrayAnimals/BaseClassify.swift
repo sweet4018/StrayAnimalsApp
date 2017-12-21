@@ -11,7 +11,7 @@ import Foundation
 class BaseClassify {
 
     ///按鈕名稱
-    var title: String = ""
+    var title: String = "" 
     ///按鈕圖片
     var imageName: String = ""
     ///ID
