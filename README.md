@@ -30,7 +30,7 @@
 	pod "SDWebImage"
 	end
 	
-##截圖
+###截圖
 [架構] <img src ="https://github.com/sweet4018/StrayAnimalsApp/blob/master/image/架構.png">
 
 ****
